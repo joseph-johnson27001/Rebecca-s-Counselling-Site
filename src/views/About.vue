@@ -1,6 +1,6 @@
 <template>
-  <section class="section">
-    <div class="about-inner">
+  <section class="about-hero">
+    <div class="about-content">
       <div class="about-left">
         <h2 class="about-title">About Rebecca</h2>
         <p class="about-desc">
@@ -8,13 +8,30 @@
           exploration and healing. I use evidence-informed, trauma-aware
           approaches, tailoring work to each individual and family.
         </p>
-        <div class="mt18">
-          <a class="btn" href="#">Read More</a>
-        </div>
+        <p class="about-desc">
+          With over 8 years of experience in mental health support, I've worked
+          with individuals across all ages, from children navigating school
+          anxieties to adults processing life transitions and trauma. My
+          approach integrates person-centred therapy, attachment theory, and
+          somatic practices to help you reconnect with yourself and build
+          lasting resilience.
+        </p>
+        <p class="about-desc">
+          I believe healing happens in relationship—in a space where you're
+          truly heard and accepted. Whether you're dealing with anxiety, grief,
+          relational challenges, or simply feeling stuck, I'm here to support
+          you on your journey toward greater wellbeing and authentic living.
+        </p>
+        <p class="about-desc">
+          Outside of my work as a counsellor, you'll find me exploring nature,
+          reading, or spending time with loved ones. I'm passionate about
+          continuing education and staying current with the latest research in
+          psychology and therapeutic approaches.
+        </p>
       </div>
       <img
-        src="https://via.placeholder.com/360x260.png?text=Profile"
-        alt="profile"
+        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80"
+        alt="Rebecca Raye"
         class="about-photo"
       />
     </div>
@@ -24,25 +41,47 @@
 <script setup></script>
 
 <style scoped>
-.about-inner {
+.about-hero {
+  display: flex;
+  justify-content: center;
+  padding: 36px;
+}
+.about-content {
   display: flex;
   gap: 40px;
   align-items: center;
+  max-width: 1300px;
+  width: 100%;
 }
 .about-left {
   flex: 1;
 }
 .about-title {
   font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: var(--text);
+  margin: 0 0 16px;
 }
 .about-desc {
   color: var(--muted);
-}
-.mt18 {
-  margin-top: 18px;
+  line-height: 1.7;
+  margin-bottom: 16px;
 }
 .about-photo {
   border-radius: 8px;
   object-fit: cover;
+  width: 360px;
+  height: 360px;
+  flex: 0 0 360px;
+}
+
+@media (max-width: 800px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .about-photo {
+    width: 100%;
+    height: 240px;
+  }
 }
 </style>

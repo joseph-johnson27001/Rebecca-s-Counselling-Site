@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="contact-hero">
     <div class="contact-wrapper">
       <h2 class="contact-title">Contact</h2>
       <p class="contact-desc">
@@ -11,7 +11,7 @@
         <input placeholder="Email" class="input-field" />
         <textarea
           placeholder="Message"
-          rows="10"
+          rows="20"
           class="input-field"
         ></textarea>
         <button class="btn" type="submit">Send</button>
@@ -23,15 +23,26 @@
 <script setup></script>
 
 <style scoped>
+.contact-hero {
+  display: flex;
+  justify-content: center;
+  padding: 36px;
+}
 .contact-wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 1300px;
+  width: 100%;
 }
 .contact-title {
   font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: var(--accent);
+  margin: 0 0 16px;
 }
 .contact-desc {
   color: var(--muted);
+  margin-bottom: 16px;
 }
 .contact-form {
   margin-top: 18px;
@@ -46,5 +57,9 @@
 }
 .contact-form .btn {
   align-self: flex-end;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 </style>

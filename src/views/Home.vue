@@ -15,7 +15,7 @@
           needs and strengths.
         </p>
         <div class="cta-wrap">
-          <a href="#services" class="btn">Our Services</a>
+          <a href="#age-groups" class="btn">My Services</a>
         </div>
       </div>
       <svg
@@ -74,7 +74,7 @@
     </div>
   </section>
 
-  <ServiceGrid />
+    <ServiceGrid id="services" />
 
   <section class="section">
     <div class="access-box">
@@ -93,7 +93,7 @@
     </div>
   </section>
 
-  <AgeGroupTabs />
+  <AgeGroupTabs id="age-groups" />
 </template>
 
 <script setup>
@@ -124,7 +124,7 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
   display: inline-block;
   padding: 12px 24px;
   background: white;
-  color: #6f8b6b;
+  color: #c7a1d5;
   border: none;
   border-radius: 5px;
   text-decoration: none;
