@@ -14,7 +14,7 @@
           and growth. Together, we work at your pace, focusing on your unique
           needs and strengths.
         </p>
-        <div style="margin-top: 18px">
+        <div class="cta-wrap">
           <a href="#services" class="btn">Our Services</a>
         </div>
       </div>
@@ -77,11 +77,9 @@
   <ServiceGrid />
 
   <section class="section">
-    <div style="background: #dbc5ce; padding: 36px; border-radius: 8px">
-      <h2 style="font-family: 'Playfair Display', serif; color: white">
-        Accessing the right help can feel daunting
-      </h2>
-      <p style="color: white">
+    <div class="access-box">
+      <h2 class="access-title">Accessing the right help can feel daunting</h2>
+      <p class="access-text">
         You may never have sought help before or may have struggled to find
         support helpful in the past. I offer a calm, flexible approach to help
         you and your family find a way forward.
@@ -96,3 +94,24 @@
 import ServiceGrid from "../components/ServiceGrid.vue";
 import AgeGroupTabs from "../components/AgeGroupTabs.vue";
 </script>
+
+<style scoped>
+.cta-wrap {
+  margin-top: 18px;
+}
+.access-box {
+  background: #dbc5ce;
+  padding: 36px;
+  border-radius: 8px;
+  color: white;
+}
+.access-title {
+  font-family: "Playfair Display", serif;
+  color: white;
+  margin: 0 0 8px;
+}
+.access-text {
+  max-width: 54ch;
+  color: white;
+}
+</style>

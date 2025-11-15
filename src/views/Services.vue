@@ -1,13 +1,11 @@
 <template>
   <section class="section">
-    <h2 style="font-family: 'Playfair Display', serif">
-      Services & Age Groups
-    </h2>
-    <p style="color: var(--muted)">
+    <h2 class="services-title">Services & Age Groups</h2>
+    <p class="services-desc">
       Overview of the main areas I work with—split by age group for clarity.
     </p>
 
-    <div style="margin-top: 28px">
+    <div class="services-wrap">
       <AgeGroup
         title="Children (Ages 5–12)"
         image="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80"
@@ -21,7 +19,7 @@
         </ul>
       </AgeGroup>
 
-      <div style="height: 28px"></div>
+      <div class="spacer"></div>
 
       <AgeGroup
         title="Teens & Adolescents (Ages 13–19)"
@@ -35,7 +33,7 @@
         </ul>
       </AgeGroup>
 
-      <div style="height: 28px"></div>
+      <div class="spacer"></div>
 
       <AgeGroup
         title="Adults & Young Adults (Ages 20+)"
@@ -55,3 +53,18 @@
 <script setup>
 import AgeGroup from "../components/AgeGroup.vue";
 </script>
+
+<style scoped>
+.services-title {
+  font-family: "Playfair Display", serif;
+}
+.services-desc {
+  color: var(--muted);
+}
+.services-wrap {
+  margin-top: 28px;
+}
+.spacer {
+  height: 28px;
+}
+</style>
