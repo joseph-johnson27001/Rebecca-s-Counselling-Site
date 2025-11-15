@@ -1,7 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
   <defs>
-    <style> .r{fill:#ffffff;} .bg{fill:#c86b4a;} .mon{fill:#fff; font-family:Playfair, serif; font-weight:700; font-size:48px}</style>
+    <style>
+      .leaf { fill-opacity: 0.8; }
+      .leaf1 { fill: #F4A460; }
+      .leaf2 { fill: #FF8C42; }
+      .leaf3 { fill: #FFB84D; }
+      .leaf4 { fill: #FFA500; }
+      .leaf5 { fill: #FF7F50; }
+    </style>
   </defs>
-  <rect class="bg" width="120" height="120" rx="20"/>
-  <text x="50%" y="58%" text-anchor="middle" class="mon">RR</text>
+  
+  <!-- Leaf 1 (top left) -->
+  <g transform="translate(25, 15) rotate(-20)">
+    <ellipse cx="0" cy="0" rx="8" ry="14" class="leaf leaf1"/>
+    <path d="M -8 0 Q -4 -5 0 -8 Q 4 -5 8 0" stroke="#8B6F47" stroke-width="0.5" fill="none"/>
+  </g>
+  
+  <!-- Leaf 2 (top center) -->
+  <g transform="translate(45, 10) rotate(10)">
+    <ellipse cx="0" cy="0" rx="9" ry="15" class="leaf leaf2"/>
+    <path d="M -9 0 Q -4 -6 0 -9 Q 4 -6 9 0" stroke="#8B6F47" stroke-width="0.5" fill="none"/>
+  </g>
+  
+  <!-- Leaf 3 (top right) -->
+  <g transform="translate(65, 20) rotate(35)">
+    <ellipse cx="0" cy="0" rx="7" ry="13" class="leaf leaf3"/>
+    <path d="M -7 0 Q -3 -5 0 -7 Q 3 -5 7 0" stroke="#8B6F47" stroke-width="0.5" fill="none"/>
+  </g>
+  
+  <!-- Leaf 4 (middle right) -->
+  <g transform="translate(80, 40) rotate(55)">
+    <ellipse cx="0" cy="0" rx="8" ry="14" class="leaf leaf4"/>
+    <path d="M -8 0 Q -4 -6 0 -8 Q 4 -6 8 0" stroke="#8B6F47" stroke-width="0.5" fill="none"/>
+  </g>
+  
+  <!-- Leaf 5 (bottom right) -->
+  <g transform="translate(75, 65) rotate(75)">
+    <ellipse cx="0" cy="0" rx="7" ry="12" class="leaf leaf5"/>
+    <path d="M -7 0 Q -3 -5 0 -7 Q 3 -5 7 0" stroke="#8B6F47" stroke-width="0.5" fill="none"/>
+  </g>
+  
+  <!-- Leaf 6 (bottom left) -->
+  <g transform="translate(40, 80) rotate(-50)">
+    <ellipse cx="0" cy="0" rx="8" ry="14" class="leaf leaf1"/>
+    <path d="M -8 0 Q -4 -6 0 -8 Q 4 -6 8 0" stroke="#8B6F47" stroke-width="0.5" fill="none"/>
+  </g>
+  
+  <!-- Curved line connecting leaves -->
+  <path d="M 25 29 Q 50 5 75 25 Q 85 50 70 75 Q 45 90 30 70" 
+        stroke="#FFB84D" stroke-width="2" fill="none" opacity="0.6"/>
 </svg>
