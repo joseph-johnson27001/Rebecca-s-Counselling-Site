@@ -89,7 +89,7 @@
         challenges, or simply a space to explore your feelings, I'm here to
         listen and guide you with compassion and expertise.
       </p>
-      <a href="/contact" class="btn-primary">Get in Touch</a>
+      <a href="/contact" class="btn-primary">Contact</a>
     </div>
   </section>
 
@@ -110,8 +110,6 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
   padding: 36px;
   border-radius: 8px;
   color: white;
-  display: flex;
-  flex-direction: column;
 }
 .access-title {
   font-family: "Playfair Display", serif;
@@ -133,7 +131,6 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
-  align-self: flex-end;
 }
 .btn-primary:hover {
   background: rgba(255, 255, 255, 0.9);
