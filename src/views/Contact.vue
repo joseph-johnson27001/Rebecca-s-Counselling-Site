@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section" style="flex-direction: column">
     <h2 style="font-family: 'Playfair Display', serif">Contact</h2>
     <p style="color: var(--muted)">
       If you'd like to enquire, please email or use the form below.
