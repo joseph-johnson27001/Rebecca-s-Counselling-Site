@@ -64,7 +64,8 @@ const services = reactive([
   },
   {
     title: "Internal Family Systems (IFS)",
-    blurb: "Maybe the anxious part isn't you—just a protector who showed up early.",
+    blurb:
+      "Maybe the anxious part isn't you—just a protector who showed up early.",
     bg: "#BFB6B0",
     icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="12" stroke="#6F8B6B" stroke-width="2"/><circle cx="18" cy="18" r="3" fill="#6F8B6B"/><circle cx="30" cy="18" r="3" fill="#6F8B6B"/><circle cx="24" cy="32" r="3" fill="#6F8B6B"/></svg>`,
   },
@@ -107,7 +108,6 @@ const services = reactive([
   font-size: 18px;
 }
 .service-rule {
-  width: 66px;
   border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
   margin-bottom: 12px;
 }

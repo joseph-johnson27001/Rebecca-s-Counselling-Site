@@ -1,6 +1,5 @@
 <template>
   <footer class="site-footer">
-    n
     <div class="footer-inner">
       <div>
         <strong>Rebecca Raye Counselling</strong>

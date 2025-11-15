@@ -100,7 +100,7 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
   margin-top: 18px;
 }
 .access-box {
-  background: #dbc5ce;
+  background: #c7a1d5;
   padding: 36px;
   border-radius: 8px;
   color: white;
@@ -111,7 +111,6 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
   margin: 0 0 8px;
 }
 .access-text {
-  max-width: 54ch;
   color: white;
 }
 </style>

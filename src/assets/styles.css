@@ -40,7 +40,7 @@ body {
   padding: 18px 36px;
 }
 .site-header > * {
-  max-width: 1600px;
+  max-width: 1300px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@ body {
   display: flex;
   gap: 40px;
   align-items: center;
-  max-width: 1600px;
+  max-width: 1300px;
   width: 100%;
 }
 .hero .left {
@@ -105,7 +105,7 @@ body {
   padding: 36px;
 }
 .section > * {
-  max-width: 1600px;
+  max-width: 1300px;
   width: 100%;
 }
 .services-grid {
@@ -114,13 +114,13 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
   .services-grid {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -186,7 +186,7 @@ footer.site-footer {
   justify-content: center;
 }
 footer.site-footer > * {
-  max-width: 1600px;
+  max-width: 1300px;
   width: 100%;
 }
 

@@ -37,7 +37,6 @@
 }
 .about-desc {
   color: var(--muted);
-  max-width: 64ch;
 }
 .mt18 {
   margin-top: 18px;
