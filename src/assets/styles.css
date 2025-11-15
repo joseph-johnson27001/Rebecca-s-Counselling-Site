@@ -183,6 +183,27 @@ body {
   cursor: pointer;
 }
 
+/* Page layouts - reusable hero/content pattern */
+.page-hero {
+  display: flex;
+  justify-content: center;
+  padding: 36px;
+}
+
+.page-heading-lg {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  color: #a8697a;
+  margin: 0 0 16px;
+}
+
+.page-heading-md {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #a8697a;
+  margin: 0 0 16px;
+}
+
 footer.site-footer {
   background: #f1e9e6;
   padding: 28px 36px;
@@ -196,17 +217,18 @@ footer.site-footer > * {
 }
 
 @media (max-width: 800px) {
-  .hero-content {
+  .page-content,
+  .hero-content,
+  .about-content,
+  .age-group {
     flex-direction: column;
   }
-  .hero .photo {
+  .hero .photo,
+  .about-photo {
     width: 100%;
     height: 240px;
   }
   .hero p {
     max-width: 100%;
-  }
-  .age-group {
-    flex-direction: column;
   }
 }

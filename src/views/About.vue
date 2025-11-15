@@ -1,8 +1,8 @@
 <template>
-  <section class="about-hero">
+  <section class="page-hero">
     <div class="about-content">
       <div class="about-left">
-        <h2 class="about-title">About Rebecca</h2>
+        <h2 class="page-heading-md">About Rebecca</h2>
         <p class="about-desc">
           I'm a trained counsellor offering a warm, compassionate space for
           exploration and healing. I use evidence-informed, trauma-aware
@@ -41,11 +41,6 @@
 <script setup></script>
 
 <style scoped>
-.about-hero {
-  display: flex;
-  justify-content: center;
-  padding: 36px;
-}
 .about-content {
   display: flex;
   gap: 40px;
@@ -55,12 +50,6 @@
 }
 .about-left {
   flex: 1;
-}
-.about-title {
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
-  color: #a8697a;
-  margin: 0 0 16px;
 }
 .about-desc {
   color: var(--muted);
@@ -73,15 +62,5 @@
   width: 360px;
   height: 360px;
   flex: 0 0 360px;
-}
-
-@media (max-width: 800px) {
-  .about-content {
-    flex-direction: column;
-  }
-  .about-photo {
-    width: 100%;
-    height: 240px;
-  }
 }
 </style>

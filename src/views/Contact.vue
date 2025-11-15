@@ -34,6 +34,11 @@
   max-width: 1300px;
   width: 100%;
 }
+.contact-desc {
+  color: var(--muted);
+  margin-bottom: 16px;
+  margin-bottom: 0px;
+}
 .contact-title {
   font-family: "Playfair Display", serif;
   font-size: 24px;
@@ -42,7 +47,9 @@
 }
 .contact-desc {
   color: var(--muted);
+  line-height: 1.7;
   margin-bottom: 16px;
+  margin-top: 0;
 }
 .contact-form {
   margin-top: 18px;
