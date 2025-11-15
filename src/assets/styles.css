@@ -87,7 +87,7 @@ body {
 .hero h1 {
   font-family: "Playfair Display", serif;
   font-size: 34px;
-  color: var(--accent);
+  color: #a8697a;
   margin: 0 0 16px;
 }
 .hero p {

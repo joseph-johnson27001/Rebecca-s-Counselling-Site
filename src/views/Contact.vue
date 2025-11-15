@@ -37,7 +37,7 @@
 .contact-title {
   font-family: "Playfair Display", serif;
   font-size: 24px;
-  color: var(--accent);
+  color: #a8697a;
   margin: 0 0 16px;
 }
 .contact-desc {

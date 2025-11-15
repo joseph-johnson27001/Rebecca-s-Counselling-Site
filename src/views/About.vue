@@ -59,7 +59,7 @@
 .about-title {
   font-family: "Playfair Display", serif;
   font-size: 24px;
-  color: var(--text);
+  color: #a8697a;
   margin: 0 0 16px;
 }
 .about-desc {
