@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <style> .r{fill:#ffffff;} .bg{fill:#c86b4a;} .mon{fill:#fff; font-family:Playfair, serif; font-weight:700; font-size:48px}</style>
+  </defs>
+  <rect class="bg" width="120" height="120" rx="20"/>
+  <text x="50%" y="58%" text-anchor="middle" class="mon">RR</text>
+</svg>
