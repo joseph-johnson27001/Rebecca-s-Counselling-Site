@@ -35,9 +35,9 @@ body {
   background: linear-gradient(90deg, var(--accent), #8b9a83);
   color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 18px 36px;
+  padding: 3px 36px;
 }
 .site-header > * {
   max-width: 1300px;
@@ -48,8 +48,9 @@ body {
 }
 .brand {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: top;
+  gap: 6px;
+  margin-top: 12px;
 }
 .brand svg {
   width: 56px;
@@ -102,7 +103,7 @@ body {
 .section {
   display: flex;
   justify-content: center;
-  padding: 36px;
+  padding: 24px;
 }
 .section > * {
   max-width: 1300px;
@@ -176,6 +177,7 @@ body {
   color: var(--accent);
   background: transparent;
   text-decoration: none;
+  cursor: pointer;
 }
 
 footer.site-footer {

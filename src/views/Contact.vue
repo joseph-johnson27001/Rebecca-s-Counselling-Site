@@ -46,9 +46,5 @@
 }
 .contact-form .btn {
   align-self: flex-end;
-  background: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 8px;
 }
 </style>

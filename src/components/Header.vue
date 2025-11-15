@@ -26,6 +26,16 @@ img {
 }
 .nav-links a {
   color: inherit;
+  padding-bottom: 4px;
+  transition: border-color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+.nav-links a.router-link-active {
+  border-bottom-color: white;
+  font-weight: 700;
 }
 
 .brand-title {

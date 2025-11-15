@@ -83,10 +83,6 @@ const tabs = [
 </script>
 
 <style scoped>
-.tabs-container {
-  margin-top: 40px;
-}
-
 .tabs-header {
   display: flex;
   gap: 0;

@@ -84,6 +84,12 @@
         support helpful in the past. I offer a calm, flexible approach to help
         you and your family find a way forward.
       </p>
+      <p class="access-text">
+        Whether you're seeking support for anxiety, trauma, relationship
+        challenges, or simply a space to explore your feelings, I'm here to
+        listen and guide you with compassion and expertise.
+      </p>
+      <a href="/contact" class="btn-primary">Get in Touch</a>
     </div>
   </section>
 
@@ -104,6 +110,8 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
   padding: 36px;
   border-radius: 8px;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 .access-title {
   font-family: "Playfair Display", serif;
@@ -112,5 +120,22 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
 }
 .access-text {
   color: white;
+  margin: 0 0 16px;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background: white;
+  color: #6f8b6b;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-end;
+}
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
 }
 </style>
