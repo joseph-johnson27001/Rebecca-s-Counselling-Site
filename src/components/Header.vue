@@ -29,6 +29,7 @@ img {
   padding-bottom: 4px;
   transition: border-color 0.2s;
   border-bottom: 2px solid transparent;
+  margin-top: 5px;
 }
 .nav-links a:hover {
   border-bottom-color: rgba(255, 255, 255, 0.5);
