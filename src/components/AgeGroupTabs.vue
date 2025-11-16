@@ -20,18 +20,15 @@
             <li>Separation anxiety and school refusal</li>
             <li>Behavioural challenges (anger, oppositional)</li>
             <li>Low self-esteem or confidence issues</li>
-            <li>Grief and loss (e.g., losing a pet or family member)</li>
             <li>
               Family transitions (e.g., divorce, new siblings, relocation)
             </li>
             <li>Sensory overwhelm or emotional dysregulation</li>
-            <li>Nightmares and sleep disturbances</li>
             <li>Difficulty making or keeping friends</li>
             <li>Bullying (victim or aggressor)</li>
             <li>Selective mutism or extreme shyness</li>
             <li>Early signs of anxiety or trauma</li>
             <li>Parental conflict or attachment ruptures</li>
-            <li>Chronic illness or hospital-related distress</li>
           </ul>
         </div>
 

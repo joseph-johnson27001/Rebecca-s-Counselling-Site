@@ -74,7 +74,7 @@
     </div>
   </section>
 
-    <ServiceGrid id="services" />
+  <ServiceGrid id="services" />
 
   <section class="section">
     <div class="access-box">

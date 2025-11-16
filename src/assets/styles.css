@@ -4,7 +4,7 @@
   --sun-3: #c86b4a; /* terracotta */
   --accent: #6f8b6b; /* muted green */
   --soft: #f7f3ee; /* off-white */
-  --text: #2b2b2b;
+  --text: #2b2b2bde;
   --muted: #7b736b;
 }
 
@@ -87,7 +87,7 @@ body {
 .hero h1 {
   font-family: "Playfair Display", serif;
   font-size: 34px;
-  color: #a8697a;
+  color: #577ba0;
   margin: 0 0 16px;
 }
 .hero p {
@@ -193,14 +193,13 @@ body {
 .page-heading-lg {
   font-family: "Playfair Display", serif;
   font-size: 34px;
-  color: #a8697a;
   margin: 0 0 16px;
 }
 
 .page-heading-md {
   font-family: "Playfair Display", serif;
   font-size: 24px;
-  color: #a8697a;
+  color: var(--text);
   margin: 0 0 16px;
 }
 

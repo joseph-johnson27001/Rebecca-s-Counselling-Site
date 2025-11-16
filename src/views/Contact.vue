@@ -42,7 +42,7 @@
 .contact-title {
   font-family: "Playfair Display", serif;
   font-size: 24px;
-  color: #a8697a;
+  color: var(--text);
   margin: 0 0 16px;
 }
 .contact-desc {
@@ -61,6 +61,7 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 6px;
+  outline: none;
 }
 .contact-form .btn {
   align-self: flex-end;
