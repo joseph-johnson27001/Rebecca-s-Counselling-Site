@@ -30,7 +30,7 @@
         </p>
       </div>
       <img
-        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80"
+        src="/src/assets/rebecca-image.jpeg"
         alt="Rebecca Raye"
         class="about-photo"
       />

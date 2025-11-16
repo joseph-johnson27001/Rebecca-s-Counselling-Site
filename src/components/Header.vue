@@ -2,8 +2,8 @@
   <header class="site-header">
     <div>
       <div class="brand">
-        <img src="/src/assets/logo.svg" alt="Rebecca Raye" />
-        <div>
+        <img class="logo" src="/src/assets/logo.png" alt="Rebecca Raye" />
+        <div class="brand-area">
           <div class="brand-title">Rebecca Raye</div>
           <div class="brand-sub">Counselling & Therapy</div>
         </div>
