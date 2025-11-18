@@ -15,7 +15,8 @@
           needs and strengths.
         </p>
         <div class="cta-wrap">
-          <a href="#age-groups" class="btn">My Services</a>
+          <a href="#services" class="btn">My Services</a>
+          <a href="#age-groups" class="btn btn-age">Who I Work With</a>
         </div>
       </div>
       <img class="photo" :src="leaves" alt="Leaves illustration" />
@@ -68,6 +69,13 @@ import leaves from "/src/assets/leaves.png";
 .access-text {
   color: white;
   margin: 0 0 16px;
+}
+.btn {
+  margin-right: 10px;
+}
+.btn-age {
+  border: var(--sun-3) 1px solid;
+  color: var(--sun-3);
 }
 .btn-primary {
   display: inline-block;
