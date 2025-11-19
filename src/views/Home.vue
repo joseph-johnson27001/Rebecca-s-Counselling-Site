@@ -54,6 +54,20 @@ import leaves from "/src/assets/leaves.png";
 <style scoped>
 .cta-wrap {
   margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 600px) {
+  .cta-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .cta-wrap .btn {
+    margin-right: 0;
+    width: 400px;
+    text-align: center;
+  }
 }
 .access-box {
   background: #c7a1d5;
