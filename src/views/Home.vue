@@ -94,7 +94,7 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
   justify-content: center;
   width: 100%;
   max-width: 1300px;
-  padding: 60px 36px;
+  padding: 60px 0px;
 }
 
 .hero-text {
