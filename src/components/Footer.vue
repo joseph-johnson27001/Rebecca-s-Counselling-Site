@@ -4,7 +4,6 @@
       <div class="footer-left">
         <strong>Rebecca Raye Counselling</strong>
         <div class="footer-sub">All parts of you are welcome.</div>
-        <div class="footer-email">hello@example.com</div>
       </div>
       <div class="footer-center">
         <a
@@ -17,6 +16,7 @@
         </a>
       </div>
       <div class="footer-right">
+        <div class="footer-email">hello@example.com</div>
         <a
           href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf"
           target="_blank"
@@ -54,7 +54,7 @@
 
 .footer-email {
   font-size: 13px;
-  margin-top: 4px;
+  margin-bottom: 12px;
 }
 
 .footer-center {
@@ -84,8 +84,8 @@
 .ethical-framework-link {
   color: inherit;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 12px;
   border-bottom: 3px solid var(--accent);
   transition: all 0.2s;
   padding-bottom: 4px;
