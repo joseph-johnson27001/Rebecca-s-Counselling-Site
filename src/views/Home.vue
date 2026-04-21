@@ -32,7 +32,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section about-section">
     <div class="about-content">
       <div class="about-left">
         <h2 class="about-heading">Hi! I'm Rebecca</h2>
@@ -62,11 +62,13 @@
           psychology and therapeutic approaches.
         </p>
       </div>
-      <img
-        src="/src/assets/rebecca-image.jpeg"
-        alt="Rebecca Raye"
-        class="about-photo"
-      />
+      <div class="about-right">
+        <img
+          src="/src/assets/rebecca-image.jpeg"
+          alt="Rebecca Raye"
+          class="about-photo"
+        />
+      </div>
     </div>
   </section>
 
@@ -267,6 +269,50 @@ onMounted(() => {
   background: rgba(255, 255, 255, 0.9);
 }
 
+.about-section {
+  background: white;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: var(--accent);
+  margin: 0 0 24px;
+}
+
+.about-desc {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.about-right {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.about-photo {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 320px;
+  height: 320px;
+}
+
 @media (max-width: 768px) {
   .hero {
     min-height: 600px;
@@ -288,64 +334,6 @@ onMounted(() => {
     margin-top: 24px;
   }
 
-  .about-content {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 40px;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .about-left {
-    flex: 1;
-  }
-
-  .about-heading {
-    font-family: "Playfair Display", serif;
-    font-size: 32px;
-    color: var(--accent);
-    margin: 0 0 24px;
-  }
-
-  .about-desc {
-    color: var(--muted);
-    line-height: 1.7;
-    margin-bottom: 16px;
-  }
-
-  .about-photo {
-    border-radius: 8px;
-    object-fit: cover;
-    width: 360px;
-    height: 360px;
-    flex: 0 0 360px;
-  }
-
-  @media (max-width: 900px) {
-    .about-content {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .about-photo {
-      width: 300px;
-      height: 300px;
-      flex: 0 0 300px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .about-heading {
-      font-size: 24px;
-    }
-
-    .about-photo {
-      width: 240px;
-      height: 240px;
-      flex: 0 0 240px;
-    }
-  }
-
   .cta-wrap .btn {
     width: 100%;
     text-align: center;
@@ -353,6 +341,22 @@ onMounted(() => {
 
   .hero-content {
     padding: 40px 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-heading {
+    font-size: 32px;
+  }
+
+  .about-photo {
+    width: 280px;
+    height: 280px;
   }
 }
 
@@ -381,6 +385,21 @@ onMounted(() => {
     width: 100%;
     text-align: center;
     padding: 12px 18px;
+  }
+
+  .about-heading {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .about-desc {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .about-photo {
+    width: 240px;
+    height: 240px;
   }
 }
 </style>
