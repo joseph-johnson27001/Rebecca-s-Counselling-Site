@@ -20,13 +20,37 @@
         >
         <router-link to="/faq">FAQ</router-link>
       </nav>
+      <button class="hamburger" @click="isMenuOpen = !isMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+    <nav v-if="isMenuOpen" class="mobile-menu">
+      <router-link to="/" @click="isMenuOpen = false">Home</router-link>
+      <router-link to="/faq" @click="isMenuOpen = false">FAQ</router-link>
+      <router-link to="/resources" @click="isMenuOpen = false"
+        >Resources</router-link
+      >
+      <router-link to="/clinical-supervision" @click="isMenuOpen = false"
+        >Clinical Supervision</router-link
+      >
+    </nav>
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const isMenuOpen = ref(false);
+</script>
 
 <style scoped>
+header {
+  position: relative;
+  z-index: 1000;
+}
+
 .header-container {
   max-width: 1300px;
   width: 100%;
@@ -88,6 +112,68 @@
   font-weight: 700;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s;
+  display: block;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--accent);
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 999;
+  }
+
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+    padding: 8px 0;
+  }
+
+  .mobile-menu a:hover {
+    opacity: 0.8;
+  }
+
+  .mobile-menu a.router-link-active {
+    border-bottom: 2px solid white;
+  }
+}
+
 @media (max-width: 600px) {
   .brand-sub {
     display: none;
@@ -99,6 +185,14 @@
 
   .nav-links a {
     font-size: 14px;
+  }
+
+  .mobile-menu {
+    padding: 16px;
+  }
+
+  .mobile-menu a {
+    font-size: 16px;
   }
 }
 </style>
