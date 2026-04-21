@@ -2,11 +2,11 @@
   <header class="site-header">
     <div>
       <div class="brand">
-        <img class="logo" src="/src/assets/logo.png" alt="Rebecca Raye" />
-        <div class="brand-area">
-          <div class="brand-title">Rebecca Raye</div>
-          <div class="brand-sub">Counselling & Therapy</div>
-        </div>
+        <img
+          class="logo"
+          src="/src/assets/Rebecca_Logo.png"
+          alt="Rebecca Raye"
+        />
       </div>
       <nav class="nav-links">
         <router-link to="/">Home</router-link>
@@ -21,7 +21,7 @@
 
 <style scoped>
 img {
-  width: 56px;
+  width: auto;
   height: 56px;
 }
 .nav-links a {
