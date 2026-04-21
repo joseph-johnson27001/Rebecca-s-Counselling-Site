@@ -28,13 +28,13 @@
     </div>
     <nav v-if="isMenuOpen" class="mobile-menu">
       <router-link to="/" @click="isMenuOpen = false">Home</router-link>
-      <router-link to="/faq" @click="isMenuOpen = false">FAQ</router-link>
       <router-link to="/resources" @click="isMenuOpen = false"
         >Resources</router-link
       >
       <router-link to="/clinical-supervision" @click="isMenuOpen = false"
         >Clinical Supervision</router-link
       >
+      <router-link to="/faq" @click="isMenuOpen = false">FAQ</router-link>
     </nav>
   </header>
 </template>
@@ -49,6 +49,7 @@ const isMenuOpen = ref(false);
 header {
   position: relative;
   z-index: 1000;
+  border-bottom: 1px solid #000;
 }
 
 .header-container {
