@@ -3,18 +3,26 @@
     <div class="footer-inner">
       <div class="footer-left">
         <strong>Rebecca Raye Counselling</strong>
-        <div class="footer-sub">
-          All parts of you are welcome.
-        </div>
+        <div class="footer-sub">All parts of you are welcome.</div>
         <div class="footer-email">hello@example.com</div>
       </div>
       <div class="footer-center">
-        <a href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf" target="_blank" rel="noopener noreferrer" class="bacp-link">
+        <a
+          href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bacp-link"
+        >
           <img src="/src/assets/BACP_Logo.png" alt="BACP" class="bacp-logo" />
         </a>
       </div>
       <div class="footer-right">
-        <a href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf" target="_blank" rel="noopener noreferrer" class="ethical-framework-link">
+        <a
+          href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ethical-framework-link"
+        >
           BACP Ethical Framework
         </a>
       </div>
