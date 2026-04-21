@@ -148,7 +148,7 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 800px;
+  height: 100vh;
   overflow: hidden;
 }
 
