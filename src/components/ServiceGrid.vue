@@ -4,7 +4,7 @@
       <div
         v-for="(s, idx) in services"
         :key="idx"
-        class="service-card"
+        class="service-card fade-on-scroll"
         :style="{ background: s.bg }"
       >
         <div class="service-icon" v-html="s.icon"></div>
@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive, onMounted } from "vue";
 
 const services = reactive([
   {
@@ -76,9 +76,49 @@ const services = reactive([
     icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 10l4 10h11l-9 7 4 10-10-7-10 7 4-10-9-7h11l4-10z" fill="#4b9fd6"/></svg>`,
   },
 ]);
+
+onMounted(() => {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-up");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".fade-on-scroll").forEach((el) => {
+    observer.observe(el);
+  });
+});
 </script>
 
 <style scoped>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in-up {
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
 .services-grid {
   display: grid;
   gap: 12px;

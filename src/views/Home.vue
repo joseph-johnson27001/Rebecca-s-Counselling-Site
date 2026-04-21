@@ -10,19 +10,21 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <h1>All parts of you are welcome.</h1>
-        <p>
+        <h1 class="fade-in-up" style="animation-delay: 0s">
+          All parts of you are welcome.
+        </h1>
+        <p class="fade-in-up" style="animation-delay: 0.2s">
           I'm Rebecca — offering evidence-informed, trauma-aware therapy. I work
           with children, adolescents, young adults and parents. Sessions are
           available online and in-person.
         </p>
-        <p>
+        <p class="fade-in-up" style="animation-delay: 0.4s">
           I aim to create a safe, supportive space where you can explore
           challenges, build resilience, and develop practical tools for coping
           and growth. Together, we work at your pace, focusing on your unique
           needs and strengths.
         </p>
-        <div class="cta-wrap">
+        <div class="cta-wrap fade-in-up" style="animation-delay: 0.6s">
           <a href="#services" class="btn">My Services</a>
           <a href="#age-groups" class="btn btn-age">Who I Work With</a>
         </div>
@@ -33,7 +35,7 @@
   <ServiceGrid id="services" />
 
   <section class="section">
-    <div class="access-box">
+    <div class="access-box fade-on-scroll">
       <h2 class="access-title">Accessing the right help can feel daunting</h2>
       <p class="access-text">
         You may never have sought help before or may have struggled to find
@@ -53,17 +55,60 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
 import ServiceGrid from "../components/ServiceGrid.vue";
 import AgeGroupTabs from "../components/AgeGroupTabs.vue";
+
+onMounted(() => {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-up");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".fade-on-scroll").forEach((el) => {
+    observer.observe(el);
+  });
+});
 </script>
 
 <style scoped>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s ease-out forwards 0.2s;
+}
+
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 .hero {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 600px;
+  min-height: 800px;
   overflow: hidden;
 }
 
@@ -94,7 +139,7 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
   justify-content: center;
   width: 100%;
   max-width: 1300px;
-  padding: 60px 0px;
+  padding: 60px 36px;
 }
 
 .hero-text {
@@ -103,22 +148,22 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
 
 .hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: 48px;
+  font-size: 72px;
   color: white;
-  margin: 0 0 24px;
+  margin: 0 0 32px;
   line-height: 1.2;
 }
 
 .hero p {
   color: rgba(255, 255, 255, 0.95);
   line-height: 1.6;
-  font-size: 16px;
-  margin: 0 0 16px;
+  font-size: 18px;
+  margin: 0 0 24px;
   max-width: 600px;
 }
 
 .cta-wrap {
-  margin-top: 32px;
+  margin-top: 40px;
   display: flex;
   gap: 16px;
 }
@@ -151,6 +196,11 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
   color: white;
 }
 
+.access-box.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 .access-title {
   font-family: "Playfair Display", serif;
   color: white;
@@ -181,20 +231,23 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 500px;
+    min-height: 600px;
   }
 
   .hero h1 {
-    font-size: 36px;
+    font-size: 48px;
+    margin-bottom: 20px;
   }
 
   .hero p {
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 16px;
   }
 
   .cta-wrap {
     flex-direction: column;
     gap: 12px;
+    margin-top: 24px;
   }
 
   .cta-wrap .btn {
@@ -209,11 +262,11 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
 
 @media (max-width: 600px) {
   .hero {
-    min-height: 450px;
+    min-height: 500px;
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 16px;
   }
 

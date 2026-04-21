@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div class="tabs-container">
+    <div class="tabs-container fade-on-scroll">
       <div class="tabs-header">
         <button
           v-for="(tab, idx) in tabs"
@@ -80,7 +80,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const activeTab = ref(0);
 const tabs = [
@@ -88,9 +88,49 @@ const tabs = [
   { label: "Teens & Adolescents (Ages 13–19)" },
   { label: "Adults & Young Adults (Ages 20+)" },
 ];
+
+onMounted(() => {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-up");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".fade-on-scroll").forEach((el) => {
+    observer.observe(el);
+  });
+});
 </script>
 
 <style scoped>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in-up {
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
 .tabs-header {
   display: flex;
   gap: 0;
