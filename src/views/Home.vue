@@ -275,9 +275,9 @@ onMounted(() => {
 
 .about-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: 48px;
-  align-items: start;
+  align-items: center;
 }
 
 .about-left {
@@ -287,10 +287,11 @@ onMounted(() => {
 }
 
 .about-heading {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  font-size: 28px;
   margin: 0 0 24px;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .about-desc {
@@ -307,10 +308,10 @@ onMounted(() => {
 }
 
 .about-photo {
-  border-radius: 8px;
+  border-radius: 24px;
   object-fit: cover;
-  width: 320px;
-  height: 320px;
+  width: 400px;
+  height: 400px;
 }
 
 @media (max-width: 768px) {
@@ -355,8 +356,8 @@ onMounted(() => {
   }
 
   .about-photo {
-    width: 280px;
-    height: 280px;
+    width: 340px;
+    height: 340px;
   }
 }
 
