@@ -10,21 +10,21 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <h1 class="fade-in-up" style="animation-delay: 0s">
+        <h1 class="fade-in-up" style="animation-delay: 0.2s">
           All parts of you are welcome.
         </h1>
-        <p class="fade-in-up" style="animation-delay: 0.2s">
+        <p class="fade-in-up" style="animation-delay: 0.4s">
           I'm Rebecca — offering evidence-informed, trauma-aware therapy. I work
           with children, adolescents, young adults and parents. Sessions are
           available online and in-person.
         </p>
-        <p class="fade-in-up" style="animation-delay: 0.4s">
+        <p class="fade-in-up" style="animation-delay: 0.6s">
           I aim to create a safe, supportive space where you can explore
           challenges, build resilience, and develop practical tools for coping
           and growth. Together, we work at your pace, focusing on your unique
           needs and strengths.
         </p>
-        <div class="cta-wrap fade-in-up" style="animation-delay: 0.6s">
+        <div class="cta-wrap fade-in-up" style="animation-delay: 0.8s">
           <a href="#services" class="btn">My Services</a>
           <a href="#age-groups" class="btn btn-age">Who I Work With</a>
         </div>
@@ -95,7 +95,7 @@ onMounted(() => {
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1.2s ease-out forwards 0.2s;
+  animation: fadeInUp 1.2s ease-out forwards 3s;
 }
 
 .fade-on-scroll {
