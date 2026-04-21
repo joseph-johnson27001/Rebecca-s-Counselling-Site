@@ -139,6 +139,10 @@ header {
     display: none;
   }
 
+  .brand-text {
+    display: none;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -175,14 +179,6 @@ header {
 }
 
 @media (max-width: 600px) {
-  .brand-sub {
-    display: none;
-  }
-
-  .nav-links {
-    gap: 12px;
-  }
-
   .nav-links a {
     font-size: 14px;
   }
