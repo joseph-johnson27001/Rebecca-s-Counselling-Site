@@ -91,27 +91,21 @@ onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in-up");
-        // Find all visible cards in this batch
-        const allCards = Array.from(document.querySelectorAll(".service-card"));
-        const visibleCards = allCards.filter((card) => {
-          const rect = card.getBoundingClientRect();
-          return rect.top < window.innerHeight && rect.bottom > 0;
+        // Animate ALL cards one by one when section comes into view
+        const allCards = document.querySelectorAll(".service-card");
+        allCards.forEach((card, index) => {
+          card.style.setProperty("--stagger-delay", `${index * 0.15}s`);
+          card.classList.add("fade-in-up");
         });
-
-        // Apply stagger delay based on position within visible cards
-        visibleCards.forEach((card, visibleIndex) => {
-          card.style.setProperty("--stagger-delay", `${visibleIndex * 0.15}s`);
-        });
-
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  document.querySelectorAll(".fade-on-scroll").forEach((el) => {
-    observer.observe(el);
-  });
+  const servicesSection = document.querySelector(".services-wrapper");
+  if (servicesSection) {
+    observer.observe(servicesSection);
+  }
 });
 </script>
 
