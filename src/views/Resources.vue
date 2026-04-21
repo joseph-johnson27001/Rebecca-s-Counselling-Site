@@ -1,12 +1,4 @@
-<template>
-  <main>
-    <section class="page-hero">
-      <div>
-        <h1 class="page-heading-lg">Resources</h1>
-      </div>
-    </section>
-  </main>
-</template>
+<template>Resources</template>
 
 <script setup></script>
 
