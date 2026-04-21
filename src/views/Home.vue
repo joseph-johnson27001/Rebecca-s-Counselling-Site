@@ -95,7 +95,7 @@ onMounted(() => {
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1.2s ease-out forwards 3s;
+  animation: fadeInUp 1.2s ease-out forwards 0.5s;
 }
 
 .fade-on-scroll {

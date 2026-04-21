@@ -1,16 +1,21 @@
 <template>
   <section class="section">
-    <div class="services-grid">
-      <div
-        v-for="(s, idx) in services"
-        :key="idx"
-        class="service-card fade-on-scroll"
-        :style="{ background: s.bg }"
-      >
-        <div class="service-icon" v-html="s.icon"></div>
-        <h3 class="service-title">{{ s.title }}</h3>
-        <div class="service-rule"></div>
-        <p class="service-blurb">{{ s.blurb }}</p>
+    <div class="services-wrapper">
+      <div class="services-header">
+        <h2>I work using:</h2>
+      </div>
+      <div class="services-grid">
+        <div
+          v-for="(s, idx) in services"
+          :key="idx"
+          class="service-card fade-on-scroll"
+          :style="{ background: s.bg }"
+        >
+          <div class="service-icon" v-html="s.icon"></div>
+          <h3 class="service-title">{{ s.title }}</h3>
+          <div class="service-rule"></div>
+          <p class="service-blurb">{{ s.blurb }}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -87,6 +92,18 @@ onMounted(() => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("fade-in-up");
+        // Find all visible cards in this batch
+        const allCards = Array.from(document.querySelectorAll(".service-card"));
+        const visibleCards = allCards.filter((card) => {
+          const rect = card.getBoundingClientRect();
+          return rect.top < window.innerHeight && rect.bottom > 0;
+        });
+
+        // Apply stagger delay based on position within visible cards
+        visibleCards.forEach((card, visibleIndex) => {
+          card.style.setProperty("--stagger-delay", `${visibleIndex * 0.15}s`);
+        });
+
         observer.unobserve(entry.target);
       }
     });
@@ -116,7 +133,26 @@ onMounted(() => {
 }
 
 .fade-in-up {
-  animation: fadeInUp 1.2s ease-out forwards;
+  animation: fadeInUp 0.8s ease-out forwards var(--stagger-delay, 0s);
+}
+
+.services-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.services-header {
+  width: 100%;
+}
+
+.services-header h2 {
+  font-family: system-ui, sans-serif;
+  font-size: 28px;
+  margin: 0;
+  font-weight: 200;
+  font-style: italic;
 }
 
 .services-grid {
@@ -131,16 +167,16 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-radius: 4px;
+  border-radius: 12px;
 }
 .service-icon {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   margin-bottom: 12px;
 }
 .service-icon svg {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
 }
 .service-title {
   font-family: "Playfair Display", serif;
