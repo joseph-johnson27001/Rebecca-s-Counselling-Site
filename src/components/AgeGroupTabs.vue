@@ -16,6 +16,9 @@
       <div class="tabs-content">
         <div v-if="activeTab === 0" class="age-section">
           <h2>{{ tabs[0].label }}</h2>
+          <p class="session-info">
+            <strong>Sessions are offered in-person only.</strong>
+          </p>
           <ul>
             <li>Separation anxiety and school refusal</li>
             <li>Behavioural challenges (anger, oppositional)</li>
@@ -30,6 +33,13 @@
             <li>Early signs of anxiety or trauma</li>
             <li>Parental conflict or attachment ruptures</li>
           </ul>
+          <br />
+          <p class="contact-info">
+            Availability depends on my location and how my private practice is
+            set up at the time.
+            <a href="/contact" class="contact-link">Contact me</a> for further
+            information.
+          </p>
         </div>
 
         <div v-if="activeTab === 1" class="age-section">
@@ -45,6 +55,7 @@
             <li>Substance use exploration</li>
             <li>Relationship and dating challenges</li>
             <li>Family conflict and communication</li>
+            <li>University transitions</li>
           </ul>
         </div>
 
@@ -142,6 +153,32 @@ const tabs = [
   margin-right: 10px;
   font-weight: bold;
   color: var(--accent);
+}
+
+.session-info {
+  background: rgba(199, 161, 213, 0.15);
+  padding: 16px;
+  border-left: 4px solid #c7a1d5;
+  margin: 0 0 20px 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.contact-info {
+  margin-top: 20px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.contact-link:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 800px) {

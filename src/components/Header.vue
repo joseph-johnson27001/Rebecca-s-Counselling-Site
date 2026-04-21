@@ -1,12 +1,16 @@
 <template>
   <header class="site-header">
-    <div>
+    <div class="header-container">
       <div class="brand">
         <img
           class="logo"
           src="/src/assets/Rebecca_Logo.png"
           alt="Rebecca Raye"
         />
+        <div class="brand-text">
+          <div class="brand-title">Rebecca Raye</div>
+          <div class="brand-sub">Counselling & Therapy</div>
+        </div>
       </div>
       <nav class="nav-links">
         <router-link to="/">Home</router-link>
@@ -20,31 +24,77 @@
 <script setup></script>
 
 <style scoped>
-img {
-  width: auto;
-  height: 56px;
+.header-container {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.nav-links a {
-  color: inherit;
-  padding-bottom: 4px;
-  transition: border-color 0.2s;
-  border-bottom: 2px solid transparent;
-  margin-top: 5px;
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-.nav-links a:hover {
-  border-bottom-color: rgba(255, 255, 255, 0.5);
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
-.nav-links a.router-link-active {
-  border-bottom-color: white;
-  font-weight: 700;
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .brand-title {
   font-family: "Playfair Display", serif;
   font-size: 18px;
+  line-height: 1.2;
 }
+
 .brand-sub {
   font-size: 12px;
   opacity: 0.9;
+  line-height: 1.2;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 4px;
+  transition: border-color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-links a.router-link-active {
+  border-bottom-color: white;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .brand-sub {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
 }
 </style>

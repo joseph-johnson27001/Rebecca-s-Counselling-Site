@@ -10,7 +10,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <h1>Warm, nurturing counselling for individuals and families</h1>
+        <h1>All parts of you are welcome.</h1>
         <p>
           I'm Rebecca — offering evidence-informed, trauma-aware therapy. I work
           with children, adolescents, young adults and parents. Sessions are
