@@ -32,6 +32,44 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="about-content">
+      <div class="about-left">
+        <h2 class="about-heading">Hi! I'm Rebecca</h2>
+        <p class="about-desc">
+          I'm a trained counsellor offering a warm, compassionate space for
+          exploration and healing. I use evidence-informed, trauma-aware
+          approaches, tailoring work to each individual and family.
+        </p>
+        <p class="about-desc">
+          With over 8 years of experience in mental health support, I've worked
+          with individuals across all ages, from children navigating school
+          anxieties to adults processing life transitions and trauma. My
+          approach integrates person-centred therapy, attachment theory, and
+          somatic practices to help you reconnect with yourself and build
+          lasting resilience.
+        </p>
+        <p class="about-desc">
+          I believe healing happens in relationship—in a space where you're
+          truly heard and accepted. Whether you're dealing with anxiety, grief,
+          relational challenges, or simply feeling stuck, I'm here to support
+          you on your journey toward greater wellbeing and authentic living.
+        </p>
+        <p class="about-desc">
+          Outside of my work as a counsellor, you'll find me exploring nature,
+          reading, or spending time with loved ones. I'm passionate about
+          continuing education and staying current with the latest research in
+          psychology and therapeutic approaches.
+        </p>
+      </div>
+      <img
+        src="/src/assets/rebecca-image.jpeg"
+        alt="Rebecca Raye"
+        class="about-photo"
+      />
+    </div>
+  </section>
+
   <ServiceGrid id="services" />
 
   <section class="section">
@@ -248,6 +286,64 @@ onMounted(() => {
     flex-direction: column;
     gap: 12px;
     margin-top: 24px;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .about-left {
+    flex: 1;
+  }
+
+  .about-heading {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    color: var(--accent);
+    margin: 0 0 24px;
+  }
+
+  .about-desc {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .about-photo {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 360px;
+    height: 360px;
+    flex: 0 0 360px;
+  }
+
+  @media (max-width: 900px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-photo {
+      width: 300px;
+      height: 300px;
+      flex: 0 0 300px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .about-heading {
+      font-size: 24px;
+    }
+
+    .about-photo {
+      width: 240px;
+      height: 240px;
+      flex: 0 0 240px;
+    }
   }
 
   .cta-wrap .btn {

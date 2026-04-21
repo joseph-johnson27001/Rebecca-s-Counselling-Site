@@ -2,7 +2,7 @@
   <section class="page-hero">
     <div class="about-content">
       <div class="about-left">
-        <h2 class="page-heading-md">About Rebecca</h2>
+        <h2 class="page-heading-md">Hi! I'm Rebecca</h2>
         <p class="about-desc">
           I'm a trained counsellor offering a warm, compassionate space for
           exploration and healing. I use evidence-informed, trauma-aware
