@@ -315,6 +315,10 @@ const toggleItem = (index) => {
     margin-bottom: 12px;
   }
 
+  .section {
+    padding: 20px 0;
+  }
+
   .faq-question {
     padding: 18px 16px;
     font-size: 15px;
