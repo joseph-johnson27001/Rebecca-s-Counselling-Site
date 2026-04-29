@@ -325,7 +325,7 @@ const toggleItem = (index) => {
   }
 
   .section {
-    padding: 20px 0;
+    padding: 20px 10px;
   }
 
   .faq-question {
