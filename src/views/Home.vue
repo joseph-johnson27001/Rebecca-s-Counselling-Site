@@ -64,7 +64,7 @@
       </div>
       <div class="about-right">
         <img
-          src="/src/assets/rebecca-image.jpeg"
+          src="/src/assets/Rebecca_Image.png"
           alt="Rebecca Raye"
           class="about-photo"
         />

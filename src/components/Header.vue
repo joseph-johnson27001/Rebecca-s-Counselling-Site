@@ -4,7 +4,7 @@
       <div class="brand">
         <img
           class="logo"
-          src="/src/assets/Rebecca_Logo.png"
+          src="/src/assets/Rebecca_Logo_Green.png"
           alt="Rebecca Raye"
         />
         <div class="brand-text">
@@ -63,11 +63,11 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  height: 100%;
 }
 
 .logo {
-  width: 64px;
+  width: 40px;
   height: 64px;
   object-fit: contain;
   flex-shrink: 0;
