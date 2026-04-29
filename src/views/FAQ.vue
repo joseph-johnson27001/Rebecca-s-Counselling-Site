@@ -34,12 +34,12 @@
           <button
             class="faq-question"
             @click="toggleItem(index)"
-            :class="{ active: expandedIndex === index }"
+            :class="{ active: expandedItems.has(index) }"
           >
             <span class="question-text">{{ item.question }}</span>
             <span class="toggle-icon">+</span>
           </button>
-          <div v-if="expandedIndex === index" class="faq-answer fade-in">
+          <div v-if="expandedItems.has(index)" class="faq-answer fade-in">
             {{ item.answer }}
           </div>
         </div>
@@ -51,7 +51,7 @@
 <script setup>
 import { ref } from "vue";
 
-const expandedIndex = ref(null);
+const expandedItems = ref(new Set());
 
 const faqItems = [
   {
@@ -117,7 +117,12 @@ const faqItems = [
 ];
 
 const toggleItem = (index) => {
-  expandedIndex.value = expandedIndex.value === index ? null : index;
+  if (expandedItems.value.has(index)) {
+    expandedItems.value.delete(index);
+  } else {
+    expandedItems.value.add(index);
+  }
+  expandedItems.value = new Set(expandedItems.value);
 };
 </script>
 
