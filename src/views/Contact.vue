@@ -17,24 +17,13 @@
           fit, please reach out.
         </p>
         <p class="fade-in-up" style="animation-delay: 0.6s">
-          I typically respond to inquiries within 48 hours and look forward to
-          connecting with you.
+          Email me at
+          <a href="mailto:rmcdonnell87@outlook.com" class="hero-email"
+            >rmcdonnell87@outlook.com</a
+          >
+          and I'll typically respond within 48 hours.
         </p>
       </div>
-    </div>
-  </section>
-
-  <section class="section contact-section">
-    <div class="contact-content">
-      <h2>Contact Information</h2>
-      <p>
-        Thank you for your interest. Please use the form below or contact me
-        directly through your preferred method.
-      </p>
-      <p class="placeholder-text">
-        Contact form and details coming soon. Please check back or reach out
-        directly for more information.
-      </p>
     </div>
   </section>
 </template>
@@ -118,32 +107,14 @@
   max-width: 600px;
 }
 
-.section {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 60px 20px;
+.hero-email {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.contact-section {
-  background: white;
-  text-align: center;
-}
-
-.contact-content h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 32px;
-  margin-bottom: 24px;
-}
-
-.contact-content p {
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.placeholder-text {
-  font-style: italic;
+.hero-email:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
