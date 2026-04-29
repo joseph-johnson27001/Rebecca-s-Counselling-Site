@@ -219,6 +219,7 @@ const toggleItem = (index) => {
 }
 
 .faq-item {
+  margin-bottom: 10px;
   border-bottom: 1px solid #e0e0e0;
 }
 
