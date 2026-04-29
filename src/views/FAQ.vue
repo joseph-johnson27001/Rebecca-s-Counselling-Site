@@ -233,7 +233,7 @@ const toggleItem = (index) => {
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  transition: background-color 0.2s ease;
+  transition: background-color;
   font-family: inherit;
   font-size: 16px;
   font-weight: 600;
@@ -268,10 +268,7 @@ const toggleItem = (index) => {
   line-height: 1.7;
   font-size: 15px;
   background-color: #fafafa;
-}
-
-.fade-in {
-  animation: fadeInDown 0.3s ease-out forwards;
+  border-top: 1px solid #ddd;
 }
 
 @keyframes fadeInDown {

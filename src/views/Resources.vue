@@ -382,8 +382,9 @@
 }
 
 .section-title {
-  font-family: "Playfair Display", serif;
-  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 100;
   margin: 0 0 40px 0;
   color: var(--text-color, #333);
 }
