@@ -2,7 +2,7 @@
   <section class="hero">
     <video class="hero-video" autoplay muted loop playsinline>
       <source
-        src="/src/assets/videos/sky_video_compressed.mp4"
+        src="https://cdn.pixabay.com/video/2026/03/08/338904_large.mp4"
         type="video/mp4"
       />
       Your browser does not support the video tag.
