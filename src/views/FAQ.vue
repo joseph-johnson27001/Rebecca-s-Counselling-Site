@@ -26,16 +26,97 @@
 
   <section class="section faq-section">
     <div class="faq-content">
-      <h2>Coming Soon</h2>
-      <p>
-        We're currently building out our FAQ section. Please contact us directly
-        if you have any questions about our services or therapeutic approach.
-      </p>
+      <div class="faq-list">
+        <div v-for="(item, index) in faqItems" :key="index" class="faq-item">
+          <button
+            class="faq-question"
+            @click="toggleItem(index)"
+            :class="{ active: expandedIndex === index }"
+          >
+            <span class="question-text">{{ item.question }}</span>
+            <span class="toggle-icon">+</span>
+          </button>
+          <div v-if="expandedIndex === index" class="faq-answer fade-in">
+            {{ item.answer }}
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const expandedIndex = ref(null);
+
+const faqItems = [
+  {
+    question: "What services do you offer?",
+    answer:
+      "I offer individual counselling for children, adolescents, and adults, play therapy for younger clients, clinical supervision for professionals, and parent consultations. Parent consultations focus on supporting you in understanding and navigating your child's emotional and behavioral needs.",
+  },
+  {
+    question: "What is the difference between counselling and play therapy?",
+    answer:
+      "Counselling uses conversation to explore thoughts and feelings, while play therapy lets children express themselves through play, which can help them process emotions when words are tough.",
+  },
+  {
+    question: "Who can access your services?",
+    answer:
+      "I work with children, adolescents, adults, and parents. Whether you're seeking support for yourself or guidance on behalf of your child, I'm here to help.",
+  },
+  {
+    question: "What is clinical supervision?",
+    answer:
+      "Clinical supervision is a reflective, professional space where therapists and helping professionals can develop their practice, reflect on their work, and ensure ethical, high-quality care.",
+  },
+  {
+    question: "Do you offer in-person or online sessions?",
+    answer:
+      "I offer both. Sessions can be in person (at my practice) or online, depending on location as I work internationally.",
+  },
+  {
+    question: "What can I expect in my first session?",
+    answer:
+      "The first session is a gentle beginning. We'll talk about what's bringing you here, your goals, and we'll see if we're a good fit—no pressure.",
+  },
+  {
+    question: "How long are sessions and how much do they cost?",
+    answer:
+      "Sessions are 50 minutes. My standard rate is £80 per session. However, I offer a sliding scale for students or those with a low income. Please reach out so we can discuss a rate that works for you. All fees to be paid before the session.",
+  },
+  {
+    question: "Do you offer a free consultation?",
+    answer:
+      "Yes, I offer a brief initial consultation so you can get a sense of the process and ask any initial questions.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "You can contact me via the form on this website or by email. I'll respond with next steps and available times.",
+  },
+  {
+    question: "What if I need to cancel or reschedule?",
+    answer:
+      "Please let me know at least 48 hours in advance. If you cancel less than 24 hours before, you'll be charged at half the session rate.",
+  },
+  {
+    question: "Is what I share confidential?",
+    answer:
+      "Absolutely. Confidentiality is a cornerstone of my practice. The only exceptions are if there's a risk of harm to you or someone else—I'll always explain any limits to confidentiality.",
+  },
+  {
+    question: "How many sessions will I need?",
+    answer:
+      "That depends on you. Some people come for a few focused sessions; others choose longer-term support. We'll review together as we go.",
+  },
+];
+
+const toggleItem = (index) => {
+  expandedIndex.value = expandedIndex.value === index ? null : index;
+};
+</script>
 
 <style scoped>
 @keyframes fadeInUp {
@@ -121,20 +202,87 @@
 }
 
 .faq-section {
+  background: transparent;
+}
+
+.faq-content {
+  width: 100%;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 24px 20px;
   background: white;
-  text-align: center;
-}
-
-.faq-content h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 32px;
-  margin-bottom: 24px;
-}
-
-.faq-content p {
-  color: var(--muted);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
   font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color, #333);
+}
+
+.question-text {
+  flex: 1;
+  text-align: left;
+}
+
+.toggle-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--accent, #c7a1d5);
+  transition: transform 0.3s ease;
+  margin-left: 16px;
+}
+
+.faq-question.active .toggle-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 20px 24px 20px;
+  color: var(--muted, #666);
   line-height: 1.7;
+  font-size: 15px;
+  background-color: #fafafa;
+}
+
+.fade-in {
+  animation: fadeInDown 0.3s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -170,6 +318,20 @@
   .hero p {
     font-size: 14px;
     margin-bottom: 12px;
+  }
+
+  .faq-question {
+    padding: 18px 16px;
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    padding: 0 16px 18px 16px;
+    font-size: 14px;
+  }
+
+  .toggle-icon {
+    margin-left: 12px;
   }
 }
 </style>
