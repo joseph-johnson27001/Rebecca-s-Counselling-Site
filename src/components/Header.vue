@@ -67,12 +67,11 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  height: 100%;
 }
 
 .logo {
-  width: 40px;
-  height: 64px;
+  width: 32px;
+  height: 60px;
   object-fit: contain;
   flex-shrink: 0;
 }
