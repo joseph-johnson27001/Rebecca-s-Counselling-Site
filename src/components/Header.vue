@@ -143,10 +143,6 @@ header {
     display: none;
   }
 
-  .brand-text {
-    display: none;
-  }
-
   .hamburger {
     display: flex;
   }
