@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import FAQ from "../views/FAQ.vue";
 import Resources from "../views/Resources.vue";
 import ClinicalSupervision from "../views/ClinicalSupervision.vue";
+import Contact from "../views/Contact.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -13,6 +14,7 @@ const routes = [
     name: "Clinical Supervision",
     component: ClinicalSupervision,
   },
+  { path: "/contact", name: "Contact", component: Contact },
 ];
 
 const router = createRouter({

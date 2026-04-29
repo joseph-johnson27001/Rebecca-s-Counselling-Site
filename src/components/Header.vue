@@ -19,6 +19,7 @@
           >Clinical Supervision</router-link
         >
         <router-link to="/faq">FAQ</router-link>
+        <router-link to="/contact">Contact</router-link>
       </nav>
       <button class="hamburger" @click="isMenuOpen = !isMenuOpen">
         <span></span>
@@ -35,6 +36,9 @@
         >Clinical Supervision</router-link
       >
       <router-link to="/faq" @click="isMenuOpen = false">FAQ</router-link>
+      <router-link to="/contact" @click="isMenuOpen = false"
+        >Contact</router-link
+      >
     </nav>
   </header>
 </template>
