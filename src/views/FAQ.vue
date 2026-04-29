@@ -325,7 +325,7 @@ const toggleItem = (index) => {
   }
 
   .faq-answer {
-    padding: 0 16px 18px 16px;
+    padding: 16px 16px 18px 16px;
     font-size: 14px;
   }
 
