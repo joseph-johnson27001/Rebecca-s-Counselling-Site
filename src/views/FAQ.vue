@@ -263,7 +263,7 @@ const toggleItem = (index) => {
 }
 
 .faq-answer {
-  padding: 0 20px 24px 20px;
+  padding: 20px 20px 24px 20px;
   color: var(--muted, #666);
   line-height: 1.7;
   font-size: 15px;
@@ -277,11 +277,9 @@ const toggleItem = (index) => {
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 

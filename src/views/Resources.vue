@@ -38,7 +38,7 @@
             <div class="resource-logo-container">
               <img
                 class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=calmharm.stem4.org.uk&sz=128"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3oeZojkK9nJEmOhcR9VDjB76KrJzqUmnnWQ&s"
                 alt="Calm Harm logo"
               />
             </div>
@@ -244,7 +244,7 @@
             <div class="resource-logo-container">
               <img
                 class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=beateatingdisorders.org.uk&sz=128"
+                src="https://www.beateatingdisorders.org.uk/static/src/img/logo.png"
                 alt="Beat Eating Disorders logo"
               />
             </div>
