@@ -30,12 +30,18 @@
         <h2 class="section-title">Helpful Mental Health Apps</h2>
         <div class="resources-grid">
           <a
-            href="https://www.calmharm.com/"
+            href="https://calmharm.stem4.org.uk/"
             target="_blank"
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon calm-harm">CH</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=calmharm.stem4.org.uk&sz=128"
+                alt="Calm Harm logo"
+              />
+            </div>
             <h3>Calm Harm</h3>
             <p>
               Supports managing self-harm urges with evidence-based techniques
@@ -44,12 +50,18 @@
           </a>
 
           <a
-            href="https://www.clearfear.com/"
+            href="https://clearfear.stem4.org.uk/"
             target="_blank"
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon clear-fear">CF</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=clearfear.stem4.org.uk&sz=128"
+                alt="Clear Fear logo"
+              />
+            </div>
             <h3>Clear Fear</h3>
             <p>
               App for managing anxiety through exposure-based exercises and
@@ -58,12 +70,18 @@
           </a>
 
           <a
-            href="https://www.movemood.com/"
+            href="https://movemood.stem4.org.uk/"
             target="_blank"
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon move-mood">MM</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=movemood.stem4.org.uk&sz=128"
+                alt="Move Mood logo"
+              />
+            </div>
             <h3>Move Mood</h3>
             <p>
               Boosts motivation and coping skills through guided movement and
@@ -83,7 +101,13 @@
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon samaritans">SA</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=samaritans.org&sz=128"
+                alt="Samaritans logo"
+              />
+            </div>
             <h3>Samaritans</h3>
             <p>
               Providing emotional support to all those who need it, when they
@@ -97,7 +121,13 @@
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon young-minds">YM</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=youngminds.org.uk&sz=128"
+                alt="Young Minds logo"
+              />
+            </div>
             <h3>Young Minds</h3>
             <p>
               Information and resources for parents and carers about young
@@ -111,7 +141,13 @@
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon kooth">KO</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=kooth.com&sz=128"
+                alt="Kooth logo"
+              />
+            </div>
             <h3>Kooth</h3>
             <p>
               Support and resources for young people from professionals and
@@ -125,7 +161,13 @@
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon befrienders">BF</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=befrienders.org&sz=128"
+                alt="Befrienders logo"
+              />
+            </div>
             <h3>Befrienders</h3>
             <p>
               Emotional support services and crisis lines available around the
@@ -139,7 +181,13 @@
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon adhd-uk">AU</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=adhduk.co.uk&sz=128"
+                alt="ADHD UK logo"
+              />
+            </div>
             <h3>ADHD UK</h3>
             <p>
               Reliable information and support related to ADHD and
@@ -153,7 +201,13 @@
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon nas">NAS</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=autism.org.uk&sz=128"
+                alt="National Autistic Society logo"
+              />
+            </div>
             <h3>National Autistic Society</h3>
             <p>
               Reliable information and support related to autism and autistic
@@ -167,7 +221,13 @@
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon teen-sleep">TS</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=teensleephub.org.uk&sz=128"
+                alt="Teen Sleep Hub logo"
+              />
+            </div>
             <h3>Teen Sleep Hub</h3>
             <p>
               Supporting young people with sleep difficulties through
@@ -181,7 +241,13 @@
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon beat">BE</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=beateatingdisorders.org.uk&sz=128"
+                alt="Beat Eating Disorders logo"
+              />
+            </div>
             <h3>Beat Eating Disorders</h3>
             <p>
               Support and resources for people struggling with eating disorders
@@ -195,7 +261,13 @@
             rel="noopener noreferrer"
             class="resource-card"
           >
-            <div class="resource-icon minded">MD</div>
+            <div class="resource-logo-container">
+              <img
+                class="resource-logo-img"
+                src="https://www.google.com/s2/favicons?domain=minded.org.uk&sz=128"
+                alt="MindEd logo"
+              />
+            </div>
             <h3>MindEd</h3>
             <p>
               Free education resource on children and young people's mental
@@ -338,8 +410,25 @@
 }
 
 .resource-card:hover {
-  transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.resource-logo-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.resource-logo-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 8px;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .resource-icon {
@@ -352,7 +441,6 @@
   font-weight: 700;
   font-size: 24px;
   color: white;
-  margin-bottom: 16px;
 }
 
 /* App Icons */
@@ -484,6 +572,16 @@
 
   .resource-card {
     padding: 24px 16px;
+  }
+
+  .resource-icon-container {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 12px;
+  }
+
+  .resource-icon-fallback {
+    font-size: 20px;
   }
 
   .resource-icon {
