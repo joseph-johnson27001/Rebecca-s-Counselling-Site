@@ -25,11 +25,185 @@
 
   <section class="section resources-section">
     <div class="resources-content">
-      <h2>Coming Soon</h2>
-      <p>
-        We're currently building out our resources section. Please check back
-        soon for recommended articles, books, tools, and support materials.
-      </p>
+      <!-- Apps Section -->
+      <div class="resources-group">
+        <h2 class="section-title">Helpful Mental Health Apps</h2>
+        <div class="resources-grid">
+          <a
+            href="https://www.calmharm.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon calm-harm">CH</div>
+            <h3>Calm Harm</h3>
+            <p>
+              Supports managing self-harm urges with evidence-based techniques
+              and tools.
+            </p>
+          </a>
+
+          <a
+            href="https://www.clearfear.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon clear-fear">CF</div>
+            <h3>Clear Fear</h3>
+            <p>
+              App for managing anxiety through exposure-based exercises and
+              coping strategies.
+            </p>
+          </a>
+
+          <a
+            href="https://www.movemood.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon move-mood">MM</div>
+            <h3>Move Mood</h3>
+            <p>
+              Boosts motivation and coping skills through guided movement and
+              mindfulness.
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Websites Section -->
+      <div class="resources-group">
+        <h2 class="section-title">Helpful Mental Health Websites</h2>
+        <div class="resources-grid">
+          <a
+            href="https://www.samaritans.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon samaritans">SA</div>
+            <h3>Samaritans</h3>
+            <p>
+              Providing emotional support to all those who need it, when they
+              need it.
+            </p>
+          </a>
+
+          <a
+            href="https://www.youngminds.org.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon young-minds">YM</div>
+            <h3>Young Minds</h3>
+            <p>
+              Information and resources for parents and carers about young
+              people's mental health.
+            </p>
+          </a>
+
+          <a
+            href="https://www.kooth.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon kooth">KO</div>
+            <h3>Kooth</h3>
+            <p>
+              Support and resources for young people from professionals and
+              peers.
+            </p>
+          </a>
+
+          <a
+            href="https://www.befrienders.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon befrienders">BF</div>
+            <h3>Befrienders</h3>
+            <p>
+              Emotional support services and crisis lines available around the
+              world.
+            </p>
+          </a>
+
+          <a
+            href="https://adhduk.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon adhd-uk">AU</div>
+            <h3>ADHD UK</h3>
+            <p>
+              Reliable information and support related to ADHD and
+              neurodiversity.
+            </p>
+          </a>
+
+          <a
+            href="https://www.autism.org.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon nas">NAS</div>
+            <h3>National Autistic Society</h3>
+            <p>
+              Reliable information and support related to autism and autistic
+              experiences.
+            </p>
+          </a>
+
+          <a
+            href="https://teensleephub.org.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon teen-sleep">TS</div>
+            <h3>Teen Sleep Hub</h3>
+            <p>
+              Supporting young people with sleep difficulties through
+              evidence-based resources.
+            </p>
+          </a>
+
+          <a
+            href="https://www.beateatingdisorders.org.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon beat">BE</div>
+            <h3>Beat Eating Disorders</h3>
+            <p>
+              Support and resources for people struggling with eating disorders
+              and related issues.
+            </p>
+          </a>
+
+          <a
+            href="https://www.minded.org.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="resource-card"
+          >
+            <div class="resource-icon minded">MD</div>
+            <h3>MindEd</h3>
+            <p>
+              Free education resource on children and young people's mental
+              health.
+            </p>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -120,19 +294,129 @@
 }
 
 .resources-section {
-  text-align: center;
+  background: transparent;
 }
 
-.resources-content h2 {
+.resources-content {
+  width: 100%;
+}
+
+.resources-group {
+  margin-bottom: 60px;
+}
+
+.resources-group:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
   font-family: "Playfair Display", serif;
   font-size: 32px;
-  margin-bottom: 24px;
+  margin: 0 0 40px 0;
+  color: var(--text-color, #333);
 }
 
-.resources-content p {
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.7;
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px;
+  background: white;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.resource-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+/* App Icons */
+.calm-harm {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.clear-fear {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.move-mood {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Website Icons */
+.samaritans {
+  background: linear-gradient(135deg, #c7a1d5 0%, #a67ab8 100%);
+}
+
+.young-minds {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.kooth {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+.befrienders {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.adhd-uk {
+  background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+}
+
+.nas {
+  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+}
+
+.teen-sleep {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.beat {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.minded {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.resource-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  margin: 0 0 12px 0;
+  color: var(--text-color, #333);
+}
+
+.resource-card p {
+  font-size: 14px;
+  color: var(--muted, #666);
+  line-height: 1.6;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -153,6 +437,20 @@
   .hero-content {
     padding: 24px 20px;
   }
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  .resources-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+
+  .resource-card {
+    padding: 24px 18px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -168,6 +466,40 @@
   .hero p {
     font-size: 14px;
     margin-bottom: 12px;
+  }
+
+  .resources-group {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .resource-card {
+    padding: 24px 16px;
+  }
+
+  .resource-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .resource-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .resource-card p {
+    font-size: 13px;
   }
 }
 </style>
