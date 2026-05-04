@@ -1,36 +1,47 @@
 <template>
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source
-        src="https://video.wixstatic.com/video/11062b_6ec38afbe78f4fbdbdb799c40dd5993f/1080p/mp4/file.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="fade-in-up" style="animation-delay: 0.2s">
-          All parts of you are welcome.
-        </h1>
-        <p class="fade-in-up" style="animation-delay: 0.4s">
-          I'm Rebecca — offering evidence-informed, trauma-aware therapy. I work
-          with children, adolescents, young adults and parents. Sessions are
-          available online and in-person.
-        </p>
-        <p class="fade-in-up" style="animation-delay: 0.6s">
-          I aim to create a safe, supportive space where you can explore
-          challenges, build resilience, and develop practical tools for coping
-          and growth. Together, we work at your pace, focusing on your unique
-          needs and strengths.
-        </p>
-        <div class="cta-wrap fade-in-up" style="animation-delay: 0.8s">
-          <a href="#services" class="btn">My Services</a>
-          <a href="#age-groups" class="btn btn-age">Who I Work With</a>
+  <div>
+    <LoadingSpinner :isLoading="!videoLoaded" />
+    <section v-show="videoLoaded" class="hero">
+      <video
+        ref="videoEl"
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        @loadeddata="onVideoLoaded"
+      >
+        <source
+          src="https://video.wixstatic.com/video/11062b_6ec38afbe78f4fbdbdb799c40dd5993f/1080p/mp4/file.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="fade-in-up" style="animation-delay: 0.2s">
+            All parts of you are welcome.
+          </h1>
+          <p class="fade-in-up" style="animation-delay: 0.4s">
+            I'm Rebecca — offering evidence-informed, trauma-aware therapy. I
+            work with children, adolescents, young adults and parents. Sessions
+            are available online and in-person.
+          </p>
+          <p class="fade-in-up" style="animation-delay: 0.6s">
+            I aim to create a safe, supportive space where you can explore
+            challenges, build resilience, and develop practical tools for coping
+            and growth. Together, we work at your pace, focusing on your unique
+            needs and strengths.
+          </p>
+          <div class="cta-wrap fade-in-up" style="animation-delay: 0.8s">
+            <a href="#services" class="btn">My Services</a>
+            <a href="#age-groups" class="btn btn-age">Who I Work With</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <section class="section about-section">
     <div class="about-content">
@@ -95,11 +106,27 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { ref, onMounted, onActivated } from "vue";
+import LoadingSpinner from "../components/LoadingSpinner.vue";
 import ServiceGrid from "../components/ServiceGrid.vue";
 import AgeGroupTabs from "../components/AgeGroupTabs.vue";
 
+const videoLoaded = ref(false);
+const videoEl = ref(null);
+
+const onVideoLoaded = () => {
+  videoLoaded.value = true;
+};
+
+onActivated(() => {
+  videoEl.value?.play();
+});
+
 onMounted(() => {
+  if (videoEl.value?.readyState >= 2) {
+    videoLoaded.value = true;
+  }
+
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
