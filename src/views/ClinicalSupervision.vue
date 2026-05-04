@@ -1,42 +1,63 @@
 <template>
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source
-        src="https://cdn.pixabay.com/video/2026/03/08/338904_large.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <p class="coming-soon-label fade-in-up" style="animation-delay: 0.1s">
-          Coming Soon
-        </p>
-        <h1 class="fade-in-up" style="animation-delay: 0.3s">
-          Clinical Supervision
-        </h1>
-        <p class="fade-in-up" style="animation-delay: 0.5s">
-          I'm currently developing this area of my practice. Clinical
-          supervision services for counsellors and helping professionals will be
-          available here soon.
-        </p>
-        <p class="fade-in-up" style="animation-delay: 0.7s">
-          In the meantime, feel free to get in touch to discuss your supervision
-          needs.
-        </p>
-        <a
-          href="mailto:rmcdonnell87@outlook.com"
-          class="contact-link fade-in-up"
-          style="animation-delay: 0.9s"
-          >Get in touch</a
-        >
+  <div>
+    <LoadingSpinner :isLoading="!videoLoaded" />
+    <section v-show="videoLoaded" class="hero">
+      <video
+        ref="videoEl"
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        @loadeddata="onVideoLoaded"
+      >
+        <source
+          src="https://cdn.pixabay.com/video/2023/10/22/186070-876973719_large.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="coming-soon-label fade-in-up" style="animation-delay: 0.1s">
+            Coming Soon
+          </p>
+          <h1 class="fade-in-up" style="animation-delay: 0.3s">
+            Clinical Supervision
+          </h1>
+          <p class="fade-in-up" style="animation-delay: 0.5s">
+            I'm currently developing this area of my practice. Clinical
+            supervision services for counsellors and helping professionals will
+            be available here soon.
+          </p>
+          <p class="fade-in-up" style="animation-delay: 0.7s">
+            In the meantime, feel free to get in touch to discuss your
+            supervision needs.
+          </p>
+          <a
+            href="mailto:rmcdonnell87@outlook.com"
+            class="contact-link fade-in-up"
+            style="animation-delay: 0.9s"
+            >Get in touch</a
+          >
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import LoadingSpinner from "../components/LoadingSpinner.vue";
+
+const videoLoaded = ref(false);
+const videoEl = ref(null);
+
+const onVideoLoaded = () => {
+  videoLoaded.value = true;
+};
+</script>
 
 <style scoped>
 @keyframes fadeInUp {

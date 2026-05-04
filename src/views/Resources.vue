@@ -1,289 +1,311 @@
 <template>
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source
-        src="/src/assets/videos/sky_video_compressed.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="fade-in-up" style="animation-delay: 0.2s">Resources</h1>
-        <p class="fade-in-up" style="animation-delay: 0.4s">
-          I believe in empowering my clients with knowledge and tools to support
-          their mental health and wellbeing. Below you'll find a collection of
-          resources, articles, and recommendations to complement our therapeutic
-          work together.
-        </p>
-        <p class="fade-in-up" style="animation-delay: 0.6s">
-          These resources cover a range of topics relevant to personal growth,
-          healing, and resilience. Feel free to explore and reach out if you'd
-          like personalized recommendations.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section resources-section">
-    <div class="resources-content">
-      <!-- Apps Section -->
-      <div class="resources-group">
-        <h2 class="section-title">Helpful Mental Health Apps</h2>
-        <div class="resources-grid">
-          <a
-            href="https://calmharm.stem4.org.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3oeZojkK9nJEmOhcR9VDjB76KrJzqUmnnWQ&s"
-                alt="Calm Harm logo"
-              />
-            </div>
-            <h3>Calm Harm</h3>
-            <p>
-              Supports managing self-harm urges with evidence-based techniques
-              and tools.
-            </p>
-          </a>
-
-          <a
-            href="https://clearfear.stem4.org.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=clearfear.stem4.org.uk&sz=128"
-                alt="Clear Fear logo"
-              />
-            </div>
-            <h3>Clear Fear</h3>
-            <p>
-              App for managing anxiety through exposure-based exercises and
-              coping strategies.
-            </p>
-          </a>
-
-          <a
-            href="https://movemood.stem4.org.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=movemood.stem4.org.uk&sz=128"
-                alt="Move Mood logo"
-              />
-            </div>
-            <h3>Move Mood</h3>
-            <p>
-              Boosts motivation and coping skills through guided movement and
-              mindfulness.
-            </p>
-          </a>
+  <div>
+    <LoadingSpinner :isLoading="!videoLoaded" />
+    <section v-show="videoLoaded" class="hero">
+      <video
+        ref="videoEl"
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        @loadeddata="onVideoLoaded"
+      >
+        <source
+          src="https://cdn.pixabay.com/video/2023/10/15/185092-874643408_large.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="fade-in-up" style="animation-delay: 0.2s">Resources</h1>
+          <p class="fade-in-up" style="animation-delay: 0.4s">
+            I believe in empowering my clients with knowledge and tools to
+            support their mental health and wellbeing. Below you'll find a
+            collection of resources, articles, and recommendations to complement
+            our therapeutic work together.
+          </p>
+          <p class="fade-in-up" style="animation-delay: 0.6s">
+            These resources cover a range of topics relevant to personal growth,
+            healing, and resilience. Feel free to explore and reach out if you'd
+            like personalized recommendations.
+          </p>
         </div>
       </div>
+    </section>
+    <div v-show="videoLoaded">
+      <section class="section resources-section">
+        <div class="resources-content">
+          <!-- Apps Section -->
+          <div class="resources-group">
+            <h2 class="section-title">Helpful Mental Health Apps</h2>
+            <div class="resources-grid">
+              <a
+                href="https://calmharm.stem4.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3oeZojkK9nJEmOhcR9VDjB76KrJzqUmnnWQ&s"
+                    alt="Calm Harm logo"
+                  />
+                </div>
+                <h3>Calm Harm</h3>
+                <p>
+                  Supports managing self-harm urges with evidence-based
+                  techniques and tools.
+                </p>
+              </a>
 
-      <!-- Websites Section -->
-      <div class="resources-group">
-        <h2 class="section-title">Helpful Mental Health Websites</h2>
-        <div class="resources-grid">
-          <a
-            href="https://www.samaritans.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=samaritans.org&sz=128"
-                alt="Samaritans logo"
-              />
-            </div>
-            <h3>Samaritans</h3>
-            <p>
-              Providing emotional support to all those who need it, when they
-              need it.
-            </p>
-          </a>
+              <a
+                href="https://clearfear.stem4.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=clearfear.stem4.org.uk&sz=128"
+                    alt="Clear Fear logo"
+                  />
+                </div>
+                <h3>Clear Fear</h3>
+                <p>
+                  App for managing anxiety through exposure-based exercises and
+                  coping strategies.
+                </p>
+              </a>
 
-          <a
-            href="https://www.youngminds.org.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=youngminds.org.uk&sz=128"
-                alt="Young Minds logo"
-              />
+              <a
+                href="https://movemood.stem4.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=movemood.stem4.org.uk&sz=128"
+                    alt="Move Mood logo"
+                  />
+                </div>
+                <h3>Move Mood</h3>
+                <p>
+                  Boosts motivation and coping skills through guided movement
+                  and mindfulness.
+                </p>
+              </a>
             </div>
-            <h3>Young Minds</h3>
-            <p>
-              Information and resources for parents and carers about young
-              people's mental health.
-            </p>
-          </a>
+          </div>
 
-          <a
-            href="https://www.kooth.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=kooth.com&sz=128"
-                alt="Kooth logo"
-              />
-            </div>
-            <h3>Kooth</h3>
-            <p>
-              Support and resources for young people from professionals and
-              peers.
-            </p>
-          </a>
+          <!-- Websites Section -->
+          <div class="resources-group">
+            <h2 class="section-title">Helpful Mental Health Websites</h2>
+            <div class="resources-grid">
+              <a
+                href="https://www.samaritans.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=samaritans.org&sz=128"
+                    alt="Samaritans logo"
+                  />
+                </div>
+                <h3>Samaritans</h3>
+                <p>
+                  Providing emotional support to all those who need it, when
+                  they need it.
+                </p>
+              </a>
 
-          <a
-            href="https://www.befrienders.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=befrienders.org&sz=128"
-                alt="Befrienders logo"
-              />
-            </div>
-            <h3>Befrienders</h3>
-            <p>
-              Emotional support services and crisis lines available around the
-              world.
-            </p>
-          </a>
+              <a
+                href="https://www.youngminds.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=youngminds.org.uk&sz=128"
+                    alt="Young Minds logo"
+                  />
+                </div>
+                <h3>Young Minds</h3>
+                <p>
+                  Information and resources for parents and carers about young
+                  people's mental health.
+                </p>
+              </a>
 
-          <a
-            href="https://adhduk.co.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=adhduk.co.uk&sz=128"
-                alt="ADHD UK logo"
-              />
-            </div>
-            <h3>ADHD UK</h3>
-            <p>
-              Reliable information and support related to ADHD and
-              neurodiversity.
-            </p>
-          </a>
+              <a
+                href="https://www.kooth.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=kooth.com&sz=128"
+                    alt="Kooth logo"
+                  />
+                </div>
+                <h3>Kooth</h3>
+                <p>
+                  Support and resources for young people from professionals and
+                  peers.
+                </p>
+              </a>
 
-          <a
-            href="https://www.autism.org.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=autism.org.uk&sz=128"
-                alt="National Autistic Society logo"
-              />
-            </div>
-            <h3>National Autistic Society</h3>
-            <p>
-              Reliable information and support related to autism and autistic
-              experiences.
-            </p>
-          </a>
+              <a
+                href="https://www.befrienders.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=befrienders.org&sz=128"
+                    alt="Befrienders logo"
+                  />
+                </div>
+                <h3>Befrienders</h3>
+                <p>
+                  Emotional support services and crisis lines available around
+                  the world.
+                </p>
+              </a>
 
-          <a
-            href="https://teensleephub.org.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=teensleephub.org.uk&sz=128"
-                alt="Teen Sleep Hub logo"
-              />
-            </div>
-            <h3>Teen Sleep Hub</h3>
-            <p>
-              Supporting young people with sleep difficulties through
-              evidence-based resources.
-            </p>
-          </a>
+              <a
+                href="https://adhduk.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=adhduk.co.uk&sz=128"
+                    alt="ADHD UK logo"
+                  />
+                </div>
+                <h3>ADHD UK</h3>
+                <p>
+                  Reliable information and support related to ADHD and
+                  neurodiversity.
+                </p>
+              </a>
 
-          <a
-            href="https://www.beateatingdisorders.org.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.beateatingdisorders.org.uk/static/src/img/logo.png"
-                alt="Beat Eating Disorders logo"
-              />
-            </div>
-            <h3>Beat Eating Disorders</h3>
-            <p>
-              Support and resources for people struggling with eating disorders
-              and related issues.
-            </p>
-          </a>
+              <a
+                href="https://www.autism.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=autism.org.uk&sz=128"
+                    alt="National Autistic Society logo"
+                  />
+                </div>
+                <h3>National Autistic Society</h3>
+                <p>
+                  Reliable information and support related to autism and
+                  autistic experiences.
+                </p>
+              </a>
 
-          <a
-            href="https://www.minded.org.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-          >
-            <div class="resource-logo-container">
-              <img
-                class="resource-logo-img"
-                src="https://www.google.com/s2/favicons?domain=minded.org.uk&sz=128"
-                alt="MindEd logo"
-              />
+              <a
+                href="https://teensleephub.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=teensleephub.org.uk&sz=128"
+                    alt="Teen Sleep Hub logo"
+                  />
+                </div>
+                <h3>Teen Sleep Hub</h3>
+                <p>
+                  Supporting young people with sleep difficulties through
+                  evidence-based resources.
+                </p>
+              </a>
+
+              <a
+                href="https://www.beateatingdisorders.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.beateatingdisorders.org.uk/static/src/img/logo.png"
+                    alt="Beat Eating Disorders logo"
+                  />
+                </div>
+                <h3>Beat Eating Disorders</h3>
+                <p>
+                  Support and resources for people struggling with eating
+                  disorders and related issues.
+                </p>
+              </a>
+
+              <a
+                href="https://www.minded.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-card"
+              >
+                <div class="resource-logo-container">
+                  <img
+                    class="resource-logo-img"
+                    src="https://www.google.com/s2/favicons?domain=minded.org.uk&sz=128"
+                    alt="MindEd logo"
+                  />
+                </div>
+                <h3>MindEd</h3>
+                <p>
+                  Free education resource on children and young people's mental
+                  health.
+                </p>
+              </a>
             </div>
-            <h3>MindEd</h3>
-            <p>
-              Free education resource on children and young people's mental
-              health.
-            </p>
-          </a>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import LoadingSpinner from "../components/LoadingSpinner.vue";
+
+const videoLoaded = ref(false);
+const videoEl = ref(null);
+
+const onVideoLoaded = () => {
+  videoLoaded.value = true;
+};
+</script>
 
 <style scoped>
 @keyframes fadeInUp {

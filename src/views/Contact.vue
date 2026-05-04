@@ -1,34 +1,55 @@
 <template>
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source
-        src="https://media.istockphoto.com/id/1424205129/video/pink-cosmos-flowers-swaying-in-wind-in-sunset.mp4?s=mp4-640x640-is&k=20&c=bf0l3KhsWsXmiUbLLKmh_OK6nlG6OKvDG3oj3q5FHcg="
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="fade-in-up" style="animation-delay: 0.2s">Get In Touch</h1>
-        <p class="fade-in-up" style="animation-delay: 0.4s">
-          I'd love to hear from you. Whether you have questions about my
-          services, need support, or simply want to explore whether we're a good
-          fit, please reach out.
-        </p>
-        <p class="fade-in-up" style="animation-delay: 0.6s">
-          Email me at
-          <a href="mailto:rmcdonnell87@outlook.com" class="hero-email"
-            >rmcdonnell87@outlook.com</a
-          >
-          and I'll typically respond within 48 hours.
-        </p>
+  <div>
+    <LoadingSpinner :isLoading="!videoLoaded" />
+    <section v-show="videoLoaded" class="hero">
+      <video
+        ref="videoEl"
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        @loadeddata="onVideoLoaded"
+      >
+        <source
+          src="https://cdn.pixabay.com/video/2025/09/22/305657_large.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="fade-in-up" style="animation-delay: 0.2s">Get In Touch</h1>
+          <p class="fade-in-up" style="animation-delay: 0.4s">
+            I'd love to hear from you. Whether you have questions about my
+            services, need support, or simply want to explore whether we're a
+            good fit, please reach out.
+          </p>
+          <p class="fade-in-up" style="animation-delay: 0.6s">
+            Email me at
+            <a href="mailto:rmcdonnell87@outlook.com" class="hero-email"
+              >rmcdonnell87@outlook.com</a
+            >
+            and I'll typically respond within 48 hours.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import LoadingSpinner from "../components/LoadingSpinner.vue";
+
+const videoLoaded = ref(false);
+const videoEl = ref(null);
+
+const onVideoLoaded = () => {
+  videoLoaded.value = true;
+};
+</script>
 
 <style scoped>
 @keyframes fadeInUp {

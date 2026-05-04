@@ -1,55 +1,74 @@
 <template>
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source
-        src="/src/assets/videos/ocean_video_compressed.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="fade-in-up" style="animation-delay: 0.2s">
-          Frequently Asked Questions
-        </h1>
-        <p class="fade-in-up" style="animation-delay: 0.4s">
-          I understand that finding the right therapist and starting therapy can
-          feel overwhelming. Here are answers to questions I'm often asked about
-          my approach, how sessions work, and what to expect.
-        </p>
-        <p class="fade-in-up" style="animation-delay: 0.6s">
-          If you have additional questions or concerns not addressed here,
-          please don't hesitate to reach out. I'm happy to discuss your specific
-          needs and how I might support you.
-        </p>
+  <div>
+    <LoadingSpinner :isLoading="!videoLoaded" />
+    <section v-show="videoLoaded" class="hero">
+      <video
+        ref="videoEl"
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        @loadeddata="onVideoLoaded"
+      >
+        <source
+          src="https://cdn.pixabay.com/video/2023/10/22/186115-877653483_large.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="fade-in-up" style="animation-delay: 0.2s">
+            Frequently Asked Questions
+          </h1>
+          <p class="fade-in-up" style="animation-delay: 0.4s">
+            I understand that finding the right therapist and starting therapy
+            can feel overwhelming. Here are answers to questions I'm often asked
+            about my approach, how sessions work, and what to expect.
+          </p>
+          <p class="fade-in-up" style="animation-delay: 0.6s">
+            If you have additional questions or concerns not addressed here,
+            please don't hesitate to reach out. I'm happy to discuss your
+            specific needs and how I might support you.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section faq-section">
-    <div class="faq-content">
-      <div class="faq-list">
-        <div v-for="(item, index) in faqItems" :key="index" class="faq-item">
-          <button
-            class="faq-question"
-            @click="toggleItem(index)"
-            :class="{ active: expandedItems.has(index) }"
-          >
-            <span class="question-text">{{ item.question }}</span>
-            <span class="toggle-icon">+</span>
-          </button>
-          <div v-if="expandedItems.has(index)" class="faq-answer fade-in">
-            {{ item.answer }}
+    <section v-show="videoLoaded" class="section faq-section">
+      <div class="faq-content">
+        <div class="faq-list">
+          <div v-for="(item, index) in faqItems" :key="index" class="faq-item">
+            <button
+              class="faq-question"
+              @click="toggleItem(index)"
+              :class="{ active: expandedItems.has(index) }"
+            >
+              <span class="question-text">{{ item.question }}</span>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div v-if="expandedItems.has(index)" class="faq-answer fade-in">
+              {{ item.answer }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import LoadingSpinner from "../components/LoadingSpinner.vue";
+
+const videoLoaded = ref(false);
+const videoEl = ref(null);
+
+const onVideoLoaded = () => {
+  videoLoaded.value = true;
+};
 
 const expandedItems = ref(new Set());
 
