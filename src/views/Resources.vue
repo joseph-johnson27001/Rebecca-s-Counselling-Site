@@ -296,11 +296,21 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onActivated } from "vue";
 import LoadingSpinner from "../components/LoadingSpinner.vue";
 
 const videoLoaded = ref(false);
 const videoEl = ref(null);
+
+onMounted(() => {
+  if (videoEl.value?.readyState >= 2) {
+    videoLoaded.value = true;
+  }
+});
+
+onActivated(() => {
+  videoEl.value?.play();
+});
 
 const onVideoLoaded = () => {
   videoLoaded.value = true;

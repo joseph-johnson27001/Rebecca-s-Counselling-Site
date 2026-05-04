@@ -28,7 +28,9 @@
           </p>
           <p class="fade-in-up" style="animation-delay: 0.6s">
             Email me at
-            <a href="mailto:rebecca.raye.counselling@gmail.com" class="hero-email"
+            <a
+              href="mailto:rebecca.raye.counselling@gmail.com"
+              class="hero-email"
               >rebecca.raye.counselling@gmail.com</a
             >
             and I'll typically respond within 48 hours.
@@ -40,11 +42,21 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onActivated } from "vue";
 import LoadingSpinner from "../components/LoadingSpinner.vue";
 
 const videoLoaded = ref(false);
 const videoEl = ref(null);
+
+onMounted(() => {
+  if (videoEl.value?.readyState >= 2) {
+    videoLoaded.value = true;
+  }
+});
+
+onActivated(() => {
+  videoEl.value?.play();
+});
 
 const onVideoLoaded = () => {
   videoLoaded.value = true;
