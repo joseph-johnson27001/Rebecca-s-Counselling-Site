@@ -16,7 +16,7 @@
         </a>
       </div>
       <div class="footer-right">
-        <div class="footer-email">rmcdonnell87@outlook.com</div>
+        <div class="footer-email">rebecca.raye.counselling@gmail.com</div>
         <a
           href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf"
           target="_blank"

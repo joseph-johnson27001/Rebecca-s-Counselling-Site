@@ -36,7 +36,7 @@
             supervision needs.
           </p>
           <a
-            href="mailto:rmcdonnell87@outlook.com"
+            href="mailto:rebecca.raye.counselling@gmail.com"
             class="contact-link fade-in-up"
             style="animation-delay: 0.9s"
             >Get in touch</a

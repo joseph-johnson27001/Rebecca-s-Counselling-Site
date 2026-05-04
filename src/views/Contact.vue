@@ -28,8 +28,8 @@
           </p>
           <p class="fade-in-up" style="animation-delay: 0.6s">
             Email me at
-            <a href="mailto:rmcdonnell87@outlook.com" class="hero-email"
-              >rmcdonnell87@outlook.com</a
+            <a href="mailto:rebecca.raye.counselling@gmail.com" class="hero-email"
+              >rebecca.raye.counselling@gmail.com</a
             >
             and I'll typically respond within 48 hours.
           </p>
