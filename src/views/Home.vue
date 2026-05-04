@@ -175,7 +175,7 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - var(--header-height));
   overflow: hidden;
 }
 
@@ -390,7 +390,7 @@ onMounted(() => {
 
 @media (max-width: 600px) {
   .hero {
-    min-height: 500px;
+    overflow: hidden;
   }
 
   .hero h1 {
