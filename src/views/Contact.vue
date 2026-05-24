@@ -12,7 +12,7 @@
         @loadeddata="onVideoLoaded"
       >
         <source
-          src="https://cdn.pixabay.com/video/2025/09/22/305657_large.mp4"
+          src="https://cdn.pixabay.com/video/2025/09/22/305657_small.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
