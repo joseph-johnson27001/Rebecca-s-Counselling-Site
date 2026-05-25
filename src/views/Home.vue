@@ -106,7 +106,7 @@
 
   <!-- Testimonials -->
   <section class="testimonials-section">
-    <div class="testimonials-inner">
+    <div class="testimonials-inner fade-on-scroll">
       <h2 class="testimonials-heading">What My Clients Say</h2>
 
       <div class="testimonials-slider">
@@ -254,7 +254,7 @@ onMounted(() => {
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1.2s ease-out forwards 0.5s;
+  animation: fadeInUp 1.2s ease-out forwards;
 }
 
 .fade-on-scroll {

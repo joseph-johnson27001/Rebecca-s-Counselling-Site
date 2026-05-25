@@ -11,7 +11,6 @@
           class="approach-card fade-on-scroll"
           :style="{
             background: approach.bg,
-            '--stagger-delay': `${idx * 0.15}s`,
           }"
         >
           <h3 class="approach-title">{{ approach.title }}</h3>
@@ -76,7 +75,7 @@ const approaches = reactive([
 }
 
 .fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards var(--stagger-delay, 0s);
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .services-wrapper {
