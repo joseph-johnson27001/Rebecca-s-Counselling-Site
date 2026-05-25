@@ -317,7 +317,7 @@ const toggleItem = (index) => {
   line-height: 1.6;
   font-size: 18px;
   margin: 0 0 24px;
-  max-width: 600px;
+  max-width: 1000px;
 }
 
 .section {

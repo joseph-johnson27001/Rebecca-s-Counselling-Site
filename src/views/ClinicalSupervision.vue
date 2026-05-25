@@ -398,6 +398,7 @@ const practitionerPanels = [
   line-height: 1.8;
   font-size: 17px;
   margin: 0 0 18px;
+  max-width: 1000px;
 }
 .hero-quote {
   border-left: 3px solid rgba(242, 184, 160, 0.8);
