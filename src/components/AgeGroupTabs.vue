@@ -1,6 +1,7 @@
 <template>
   <section class="section">
     <div class="tabs-container fade-on-scroll">
+      <h2 class="tabs-title">Who I Work With</h2>
       <div class="tabs-header">
         <button
           v-for="(tab, idx) in tabs"
@@ -129,6 +130,14 @@ onMounted(() => {
 
 .fade-in-up {
   animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.tabs-title {
+  font-family: system-ui, sans-serif;
+  font-size: 28px;
+  margin: 0 0 32px 0;
+  font-weight: 200;
+  font-style: italic;
 }
 
 .tabs-header {
