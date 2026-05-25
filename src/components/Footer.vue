@@ -4,6 +4,14 @@
       <div class="footer-left">
         <strong>Rebecca Raye Counselling</strong>
         <div class="footer-sub">All parts of you are welcome.</div>
+        <a
+          href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ethical-framework-link"
+        >
+          BACP Ethical Framework
+        </a>
       </div>
       <div class="footer-center">
         <a
@@ -17,14 +25,9 @@
       </div>
       <div class="footer-right">
         <div class="footer-email">rebecca.raye.counselling@gmail.com</div>
-        <a
-          href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="ethical-framework-link"
+        <router-link to="/contact" class="booking-link"
+          >Book a free 15 minute consultation</router-link
         >
-          BACP Ethical Framework
-        </a>
       </div>
     </div>
   </footer>
@@ -90,11 +93,26 @@
   transition: all 0.2s;
   padding-bottom: 4px;
   display: inline-block;
+  margin-top: 8px;
 }
 
 .ethical-framework-link:hover {
   color: var(--accent);
-  transform: translateY(-2px);
+}
+
+.booking-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  border-bottom: 3px solid var(--accent);
+  transition: all 0.2s;
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+.booking-link:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {

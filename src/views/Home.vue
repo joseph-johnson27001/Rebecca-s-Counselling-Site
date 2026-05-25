@@ -525,7 +525,7 @@ onMounted(() => {
 
 /* ── Testimonials ── */
 .testimonials-section {
-  background: #f0e8e2;
+  background: #f3d1c4;
   display: flex;
   justify-content: center;
   padding: 64px 24px;
