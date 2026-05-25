@@ -185,8 +185,41 @@ const faqItems = [
   },
   {
     question: "How can I prepare myself for starting therapy as an adult?",
-    answer:
-      "You don’t need to have everything figured out. It’s fine to come with a clear goal or just a sense that something isn’t sitting right. Therapy can feel messy at first, and there is no right way to do it. Sessions are typically 50 minutes, you set the pace, and the first session is about getting a sense of each other with no pressure to go deep immediately.",
+    answer: `<p>Starting therapy as an adult can feel both relieving and exposing. It’s a space that invites honesty not perfection.</p>
+
+<h4>Before You Begin</h4>
+<ul>
+  <li>You don’t need to have everything figured out.</li>
+  <li>You can come with a clear goal, or just a sense that something isn’t sitting right.</li>
+  <li>It’s okay if things feel messy or hard to put into words.</li>
+  <li>There is no "right way" to do therapy.</li>
+</ul>
+
+<h4>What to Expect</h4>
+<ul>
+  <li>Sessions are typically 50 minutes.</li>
+  <li>You set the pace — we go as fast or as gently as feels manageable.</li>
+  <li>Healing is not linear; there will be movement, pauses, and revisiting.</li>
+</ul>
+
+<h4>First Session</h4>
+<p>The first session is about getting a sense of each other.</p>
+<ul>
+  <li>You may be asked what brings you to therapy.</li>
+  <li>We’ll explore what you’re hoping for, even if it’s not fully clear yet.</li>
+  <li>You can ask questions about how I work.</li>
+  <li>There is no pressure to go deep immediately.</li>
+</ul>
+
+<h4>Short-Term vs Long-Term Therapy</h4>
+<ul>
+  <li>Short-term counselling can focus on a specific issue or period of life.</li>
+  <li>Long-term therapy allows for deeper exploration of patterns, relationships, and identity.</li>
+  <li>We can think about this together — it doesn’t have to be decided upfront.</li>
+</ul>
+
+<h4>Confidentiality</h4>
+<p>Your sessions are confidential, with clear and transparent limits relating to safety. This confidentiality is what allows for openness, honesty, and trust to develop.</p>`,
   },
   {
     question: "Is what I share confidential?",
