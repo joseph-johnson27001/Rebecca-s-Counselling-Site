@@ -359,16 +359,6 @@ const toggleItem = (index) => {
   background: #fae8df;
 }
 
-.faq-item:nth-child(3n + 1) .faq-answer {
-  background: #fefaf7;
-}
-.faq-item:nth-child(3n + 2) .faq-answer {
-  background: #f7faf6;
-}
-.faq-item:nth-child(3n + 3) .faq-answer {
-  background: #fef7f2;
-}
-
 .faq-question {
   width: 100%;
   padding: 26px 28px;
@@ -414,6 +404,7 @@ const toggleItem = (index) => {
   color: var(--muted, #7b736b);
   line-height: 1.75;
   font-size: 15px;
+  background: white;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 

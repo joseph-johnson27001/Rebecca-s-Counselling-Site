@@ -141,6 +141,10 @@
 
 <script setup>
 import { reactive } from "vue";
+import chatIcon from "../assets/chat_icon.png";
+import kiteIcon from "../assets/kite_icon.png";
+import compassIcon from "../assets/compass_icon.png";
+import familyIcon from "../assets/family_icon.png";
 
 const approaches = reactive([
   {
@@ -154,25 +158,25 @@ const approaches = reactive([
       "Attachment-Based",
     ],
     bg: "#F7D9C8",
-    icon: "/src/assets/chat_icon.png",
+    icon: chatIcon,
   },
   {
     title: "Creative Methods",
     items: ["Art", "Play", "Sand Tray"],
     bg: "#d4e8d0",
-    icon: "/src/assets/kite_icon.png",
+    icon: kiteIcon,
   },
   {
     title: "Somatic Approaches",
     items: ["EFT", "Emotional Freedom", "Tapping", "Gestalt"],
     bg: "#f5e8c8",
-    icon: "/src/assets/compass_icon.png",
+    icon: compassIcon,
   },
   {
     title: "Trauma Informed Practice",
     items: ["Triphasic Model"],
     bg: "#fce8e0",
-    icon: "/src/assets/family_icon.png",
+    icon: familyIcon,
   },
 ]);
 </script>
