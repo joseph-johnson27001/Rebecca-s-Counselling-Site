@@ -27,6 +27,21 @@
             good fit, please reach out.
           </p>
           <p class="fade-in-up" style="animation-delay: 0.6s">
+            This is a space for you to:
+          </p>
+          <ul class="hero-list fade-in-up" style="animation-delay: 1s">
+            <li>Ask questions about how I work</li>
+            <li>Share a little about what you’re looking for</li>
+            <li>
+              Get a sense of whether you feel comfortable speaking with me
+            </li>
+          </ul>
+          <p class="fade-in-up" style="animation-delay: 1.2s">
+            There is no expectation to commit — the purpose is clarity, not
+            pressure. Finding the right therapeutic relationship matters. This
+            is simply the first step in exploring that.
+          </p>
+          <p class="fade-in-up" style="animation-delay: 0.8s">
             Email me at
             <a
               href="mailto:rebecca.raye.counselling@gmail.com"
@@ -137,7 +152,7 @@ const onVideoLoaded = () => {
   line-height: 1.6;
   font-size: 18px;
   margin: 0 0 24px;
-  max-width: 600px;
+  /* max-width: 600px; */
 }
 
 .hero-email {
@@ -148,6 +163,17 @@ const onVideoLoaded = () => {
 
 .hero-email:hover {
   opacity: 0.8;
+}
+
+.hero-list {
+  margin: 0 0 24px 1.4rem;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.95);
+  list-style: disc;
+}
+
+.hero-list li {
+  margin-bottom: 0.75rem;
 }
 
 @media (max-width: 768px) {
