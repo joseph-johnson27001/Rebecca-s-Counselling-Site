@@ -35,6 +35,9 @@
         </div>
       </div>
     </section>
+    <div v-show="videoLoaded" class="resources-logo-wrapper">
+      <img :src="therapyLogo" alt="Therapy logo" class="resources-logo" />
+    </div>
     <div v-show="videoLoaded">
       <section class="section resources-section">
         <div class="resources-content">
@@ -298,6 +301,7 @@
 <script setup>
 import { ref, onMounted, onActivated } from "vue";
 import LoadingSpinner from "../components/LoadingSpinner.vue";
+import therapyLogo from "../assets/therapy-logo.png";
 
 const videoLoaded = ref(false);
 const videoEl = ref(null);
@@ -402,6 +406,21 @@ const onVideoLoaded = () => {
 
 .resources-section {
   background: transparent;
+}
+
+.resources-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 36px 20px 0;
+}
+
+.resources-logo {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: -100px;
+  margin-top: -50px;
 }
 
 .resources-content {
