@@ -164,7 +164,7 @@ import AgeGroupTabs from "../components/AgeGroupTabs.vue";
 const testimonials = [
   {
     text: "Thank you for creating a safe space for me to talk about literally anything, from my childhood, to the present, and the future. Our sessions together have helped me so much in identifying patterns in my thinking and my behavior, and because of that, I've been able to work on myself and heal some of those wounds. I've become a lot more comfortable opening up, not only to you, but also to my friends and family, which is something I've always struggled with. I've felt so heard and understood in our sessions, which has truly made such a huge difference in how I see myself, and how I approach challenges and even milestones. I have grown so much as a person in such a short period of time, and it is all thanks to your effort and your patience with me. You've had a really great impact on me and I will carry everything I've learned from you with me forever.",
-    attribution: "Anonymous — Adult client",
+    attribution: "Adult client",
   },
   {
     text: "Rebecca listened with compassion, respected and approached my concerns, no matter how silly they seemed to me, with a serious and genuine approach.",
