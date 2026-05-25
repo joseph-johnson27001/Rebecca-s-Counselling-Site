@@ -50,7 +50,7 @@
               <span class="toggle-icon">+</span>
             </button>
             <div v-if="expandedItems.has(index)" class="faq-answer fade-in">
-              {{ item.answer }}
+              <div v-html="item.answer"></div>
             </div>
           </div>
         </div>
@@ -132,6 +132,61 @@ const faqItems = [
     question: "What if I need to cancel or reschedule?",
     answer:
       "Please let me know at least 48 hours in advance. If you cancel less than 24 hours before, you'll be charged at half the session rate.",
+  },
+  {
+    question: "How can I help prepare my child for therapy?",
+    answer: `<p>Taking the step to seek support for your child can feel significant. It often comes with a mix of hope, uncertainty, and sometimes worry about how your child will respond. All of that is completely understandable.</p>
+
+<h4>Helping Your Child Prepare</h4>
+<p>How therapy is introduced matters. Children and young people tend to take their cues from you.</p>
+<ul>
+  <li>Keep the language simple and honest: "You’re going to meet someone whose job is to listen and help you make sense of things."</li>
+  <li>Avoid presenting therapy as something that is "fixing" them.</li>
+  <li>Emphasise choice and safety: they don’t have to share everything straight away.</li>
+  <li>Let them know it’s okay to feel unsure, nervous, or even resistant.</li>
+</ul>
+<p>Resistance is not a problem to eliminate — it’s communication. It often reflects uncertainty, fear of the unknown, or a need for control.</p>
+
+<h4>Preparing Yourself as a Parent</h4>
+<ul>
+  <li>Your role is vital, but it shifts slightly when your child enters therapy.</li>
+  <li>Be ready to tolerate not knowing everything that is shared.</li>
+  <li>Trust the process, even when progress feels slow or unclear.</li>
+  <li>Hold steady boundaries around confidentiality.</li>
+  <li>Notice your own emotional responses — therapy can bring things up for parents too.</li>
+</ul>
+
+<h4>Confidentiality &amp; Boundaries</h4>
+<ul>
+  <li>For therapy to feel safe, your child needs a sense of privacy.</li>
+  <li>Sessions are confidential, with clear limits around safety.</li>
+  <li>You will be informed of any concerns relating to risk or wellbeing.</li>
+  <li>Regular check-ins can be arranged to support you as a parent, without breaching your child’s trust.</li>
+</ul>
+
+<h4>After the Session: Supporting Decompression</h4>
+<p>What happens after therapy matters just as much as the session itself. Consider creating a small, predictable ritual after each session:</p>
+<ul>
+  <li>A quiet car journey with no pressure to talk</li>
+  <li>A shared snack or drink</li>
+  <li>A familiar activity (walk, music, drawing)</li>
+</ul>
+<p>This helps your child regulate and transition back into their day.</p>
+
+<h4>Staying Connected (Without Interrogating)</h4>
+<p>Curiosity builds connection. Interrogation shuts it down. Instead of: "What did you talk about?" try:</p>
+<ul>
+  <li>"How was it for you today?"</li>
+  <li>"Anything that stayed with you from the session?"</li>
+  <li>"Do you feel lighter, heavier, or about the same?"</li>
+  <li>"Is there anything you’d like from me right now?"</li>
+</ul>
+<p>Let your child lead. Sometimes the most supportive response is simply being present.</p>`,
+  },
+  {
+    question: "How can I prepare myself for starting therapy as an adult?",
+    answer:
+      "You don’t need to have everything figured out. It’s fine to come with a clear goal or just a sense that something isn’t sitting right. Therapy can feel messy at first, and there is no right way to do it. Sessions are typically 50 minutes, you set the pace, and the first session is about getting a sense of each other with no pressure to go deep immediately.",
   },
   {
     question: "Is what I share confidential?",
@@ -303,10 +358,30 @@ const toggleItem = (index) => {
 .faq-answer {
   padding: 20px 20px 24px 20px;
   color: var(--muted, #666);
-  line-height: 1.7;
+  line-height: 1.75;
   font-size: 15px;
   background-color: #fafafa;
   border-top: 1px solid #ddd;
+}
+
+.faq-answer h4 {
+  margin: 1.2rem 0 0.6rem;
+  font-size: 1rem;
+  color: var(--text-color, #333);
+}
+
+.faq-answer p {
+  margin: 0.8rem 0;
+}
+
+.faq-answer ul {
+  margin: 0.8rem 0 1rem 1.3rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.faq-answer li {
+  margin-bottom: 0.55rem;
 }
 
 @keyframes fadeInDown {
