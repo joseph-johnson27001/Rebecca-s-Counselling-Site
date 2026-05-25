@@ -21,7 +21,7 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="fade-in-up" style="animation-delay: 0.2s">
-            All parts of you are welcome.
+            All parts of you are welcome
           </h1>
 
           <p class="fade-in-up" style="animation-delay: 0.4s">
