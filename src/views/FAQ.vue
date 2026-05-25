@@ -47,7 +47,7 @@
               :class="{ active: expandedItems.has(index) }"
             >
               <span class="question-text">{{ item.question }}</span>
-              <span class="toggle-icon">+</span>
+              <span class="toggle-icon">›</span>
             </button>
             <div v-if="expandedItems.has(index)" class="faq-answer fade-in">
               <div v-html="item.answer"></div>
@@ -337,33 +337,40 @@ const toggleItem = (index) => {
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 16px;
 }
 
 .faq-item {
-  margin-bottom: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(199, 161, 213, 0.12);
+  transition: all 0.3s ease;
 }
 
-.faq-item:last-child {
-  border-bottom: none;
+.faq-item:hover {
+  box-shadow: 0 4px 20px rgba(199, 161, 213, 0.18);
 }
 
 .faq-question {
   width: 100%;
-  padding: 24px 20px;
-  background: white;
-  border: none;
+  padding: 28px 28px;
+  background: linear-gradient(135deg, #f9f5ff 0%, #fef5f9 100%);
+  border: 1px solid rgba(199, 161, 213, 0.15);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  transition: background-color;
+  transition: all 0.3s ease;
   font-family: inherit;
   font-size: 16px;
   font-weight: 600;
   color: var(--text-color, #333);
+}
+
+.faq-question:hover {
+  background: linear-gradient(135deg, #f3ecff 0%, #fceef5 100%);
 }
 
 .question-text {
@@ -382,19 +389,20 @@ const toggleItem = (index) => {
   color: var(--accent, #c7a1d5);
   transition: transform 0.3s ease;
   margin-left: 16px;
+  transform: rotate(90deg);
 }
 
 .faq-question.active .toggle-icon {
-  transform: rotate(45deg);
+  transform: rotate(270deg);
 }
 
 .faq-answer {
-  padding: 20px 20px 24px 20px;
+  padding: 24px 28px;
   color: var(--muted, #666);
   line-height: 1.75;
   font-size: 15px;
-  background-color: #fafafa;
-  border-top: 1px solid #ddd;
+  background-color: rgba(249, 245, 255, 0.5);
+  border-top: 1px solid rgba(199, 161, 213, 0.1);
 }
 
 .faq-answer h4 {
@@ -465,13 +473,17 @@ const toggleItem = (index) => {
     padding: 20px 10px;
   }
 
+  .faq-item {
+    border-radius: 16px;
+  }
+
   .faq-question {
-    padding: 18px 16px;
+    padding: 20px 18px;
     font-size: 15px;
   }
 
   .faq-answer {
-    padding: 16px 16px 18px 16px;
+    padding: 18px 18px 20px 18px;
     font-size: 14px;
   }
 
