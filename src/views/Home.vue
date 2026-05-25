@@ -25,18 +25,13 @@
           </h1>
 
           <p class="fade-in-up" style="animation-delay: 0.4s">
-            I am an integrative counsellor and trauma-informed practitioner
-            working with children, adolescents, adults, and parents. My approach
-            is warm, relational, and tailored to each individual, creating a
-            space where people feel safe to explore challenges without judgement
-            or pressure.
+            My approach is warm, relational, and tailored to each individual,
+            creating a space where people feel safe to explore challenges
+            without judgement or pressure.
           </p>
           <p class="fade-in-up" style="animation-delay: 0.6s">
             I work integratively, meaning therapy is adapted thoughtfully to
-            each person rather than following one fixed approach. Grounded in
-            relational, trauma-aware, and neurodiversity-affirming practice, I
-            place importance on emotional safety, connection, and understanding
-            the wider experiences that shape us.
+            each person rather than following one fixed approach.
           </p>
 
           <div class="cta-wrap fade-in-up" style="animation-delay: 0.8s">
