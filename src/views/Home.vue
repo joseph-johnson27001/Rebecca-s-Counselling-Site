@@ -391,13 +391,18 @@ onMounted(() => {
 
 .access-title {
   font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 200;
+  font-style: italic;
   color: white;
-  margin: 0 0 8px;
+  margin: 0 0 16px;
 }
 
 .access-text {
   color: white;
   margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 .btn-primary {
