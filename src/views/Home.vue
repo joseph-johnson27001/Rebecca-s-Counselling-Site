@@ -570,7 +570,7 @@ onMounted(() => {
 }
 
 .testimonials-inner {
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   display: flex;
   flex-direction: column;
