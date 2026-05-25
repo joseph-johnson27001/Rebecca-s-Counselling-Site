@@ -46,32 +46,44 @@
   <section class="section about-section">
     <div class="about-content">
       <div class="about-left">
-        <h2 class="about-heading">Hi! I'm Rebecca</h2>
+        <h2 class="about-heading">Hi, I'm Rebecca</h2>
         <p class="about-desc">
-          I'm a trained counsellor offering a warm, compassionate space for
-          exploration and healing. I use evidence-informed, trauma-aware
-          approaches, tailoring work to each individual and family.
+          I am an integrative counsellor and trauma-informed practitioner
+          working with children, adolescents, adults, and parents. My approach
+          is warm, relational, and tailored to each individual, creating a space
+          where people feel safe to explore challenges without judgement or
+          pressure.
         </p>
         <p class="about-desc">
-          With over 8 years of experience in mental health support, I've worked
-          with individuals across all ages, from children navigating school
-          anxieties to adults processing life transitions and trauma. My
-          approach integrates person-centred therapy, attachment theory, and
-          somatic practices to help you reconnect with yourself and build
-          lasting resilience.
+          I work integratively, meaning therapy is adapted thoughtfully to each
+          person rather than following one fixed approach. Grounded in
+          relational, trauma-aware, and neurodiversity-affirming practice, I
+          place importance on emotional safety, connection, and understanding
+          the wider experiences that shape us.
+        </p>
+        <p class="about-desc">My practice draws from:</p>
+        <ul class="about-list">
+          <li>Relational and person-centred therapy</li>
+          <li>Attachment and developmental understanding</li>
+          <li>Psychodynamic and existential exploration</li>
+          <li>CBT and DBT-informed strategies</li>
+          <li>Creative and play-based therapy</li>
+          <li>Somatic and trauma-informed approaches</li>
+        </ul>
+        <p class="about-desc">
+          When helpful, sessions may also include creative and play-based
+          approaches, sand tray work, grounding techniques, emotional regulation
+          support, and body-based approaches that help clients better understand
+          both their emotional and nervous system responses.
         </p>
         <p class="about-desc">
-          I believe healing happens in relationship—in a space where you're
-          truly heard and accepted. Whether you're dealing with anxiety, grief,
-          relational challenges, or simply feeling stuck, I'm here to support
-          you on your journey toward greater wellbeing and authentic living.
+          I have over 10 years of experience working therapeutically with
+          children, adolescents, and adults, including extensive experience
+          within both school-based and international settings. I am a BACP
+          Accredited Counsellor and work in accordance with the BACP Ethical
+          Framework.
         </p>
-        <p class="about-desc">
-          Outside of my work as a counsellor, you'll find me exploring nature,
-          reading, or spending time with loved ones. I'm passionate about
-          continuing education and staying current with the latest research in
-          psychology and therapeutic approaches.
-        </p>
+        <p class="about-desc">Sessions are available currently online.</p>
       </div>
       <div class="about-right">
         <img
@@ -418,6 +430,19 @@ onMounted(() => {
   line-height: 1.7;
   margin-bottom: 16px;
   font-size: 16px;
+}
+
+.about-list {
+  margin: 16px 0 16px 24px;
+  padding: 0;
+  list-style: disc;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.about-list li {
+  margin-bottom: 8px;
 }
 
 .about-right {
