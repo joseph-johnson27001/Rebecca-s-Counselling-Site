@@ -191,7 +191,7 @@
               <h3 class="practical-title">Standard Rate</h3>
             </div>
             <p class="practical-text">£70 per session</p>
-            <p class="practical-text muted">£3,500 block rate available</p>
+            <!-- <p class="practical-text muted">£3,500 block rate available</p> -->
           </div>
           <div class="practical-item">
             <div class="practical-header">
@@ -199,7 +199,7 @@
               <h3 class="practical-title">Student &amp; Trainee Rate</h3>
             </div>
             <p class="practical-text">£45 per session</p>
-            <p class="practical-text muted">£2,000 block rate available</p>
+            <!-- <p class="practical-text muted">£2,000 block rate available</p> -->
           </div>
           <div class="practical-item">
             <div class="practical-header">

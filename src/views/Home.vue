@@ -340,24 +340,41 @@ onMounted(() => {
 }
 
 .cta-wrap .btn {
-  background: white;
-  color: var(--accent);
+  display: inline-block;
+  padding: 14px 36px;
   border: 2px solid white;
-  font-weight: 600;
-}
-
-.cta-wrap .btn-age {
-  background: transparent;
   color: white;
-  border: 2px solid white;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .cta-wrap .btn:hover {
-  background: rgba(255, 255, 255, 0.95);
+  background: white;
+  color: #333;
+}
+
+.cta-wrap .btn-age {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .cta-wrap .btn-age:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: white;
+  color: #333;
 }
 
 .access-box {
