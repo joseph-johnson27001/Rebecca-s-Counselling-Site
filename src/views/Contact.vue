@@ -29,19 +29,19 @@
           <p class="fade-in-up" style="animation-delay: 0.6s">
             This is a space for you to:
           </p>
-          <ul class="hero-list fade-in-up" style="animation-delay: 1s">
+          <ul class="hero-list fade-in-up" style="animation-delay: 0.6s">
             <li>Ask questions about how I work</li>
             <li>Share a little about what you’re looking for</li>
             <li>
               Get a sense of whether you feel comfortable speaking with me
             </li>
           </ul>
-          <p class="fade-in-up" style="animation-delay: 1.2s">
+          <p class="fade-in-up" style="animation-delay: 0.8s">
             There is no expectation to commit — the purpose is clarity, not
             pressure. Finding the right therapeutic relationship matters. This
             is simply the first step in exploring that.
           </p>
-          <p class="fade-in-up" style="animation-delay: 0.8s">
+          <p class="fade-in-up" style="animation-delay: 1s">
             Email me at
             <a
               href="mailto:rebecca.raye.counselling@gmail.com"
