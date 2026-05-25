@@ -2,19 +2,22 @@
   <section class="section">
     <div class="services-wrapper">
       <div class="services-header">
-        <h2>I work using:</h2>
+        <h2>My approaches</h2>
       </div>
-      <div class="services-grid">
+      <div class="approaches-grid">
         <div
-          v-for="(s, idx) in services"
+          v-for="(approach, idx) in approaches"
           :key="idx"
-          class="service-card fade-on-scroll"
-          :style="{ background: s.bg }"
+          class="approach-card fade-on-scroll"
+          :style="{
+            background: approach.bg,
+            '--stagger-delay': `${idx * 0.15}s`,
+          }"
         >
-          <div class="service-icon" v-html="s.icon"></div>
-          <h3 class="service-title">{{ s.title }}</h3>
-          <div class="service-rule"></div>
-          <p class="service-blurb">{{ s.blurb }}</p>
+          <h3 class="approach-title">{{ approach.title }}</h3>
+          <ul class="approach-list">
+            <li v-for="item in approach.items" :key="item">{{ item }}</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -22,91 +25,37 @@
 </template>
 
 <script setup>
-import { reactive, onMounted } from "vue";
+import { reactive } from "vue";
 
-const services = reactive([
+const approaches = reactive([
   {
-    title: "Person-Centred Therapy",
-    blurb: "You lead. I walk beside you.",
+    title: "Integrative Modalities",
+    items: [
+      "Person Centred",
+      "Existential",
+      "Psychodynamic",
+      "CBT",
+      "DBT",
+      "Attachment-Based",
+    ],
     bg: "#F7D9C8",
-    icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="10" r="6" fill="#d4765f"/><path d="M12 22h24v16c0 2-2 4-4 4H16c-2 0-4-2-4-4v-16z" stroke="#d4765f" stroke-width="2"/></svg>`,
   },
   {
-    title: "Attachment Therapy",
-    blurb: "Let's trace how connection—or disconnection—shaped your instincts.",
-    bg: "#E6DFF6",
-    icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20l12-8 12 8v14c0 2-2 4-4 4H16c-2 0-4-2-4-4v-14z" stroke="#9b6fa8" stroke-width="2"/></svg>`,
+    title: "Creative Methods",
+    items: ["Art", "Play", "Sand Tray"],
+    bg: "#d4e8d0",
   },
   {
-    title: "Interpersonal Neurobiology",
-    blurb: "Your nervous system has a memory. But also… flexibility.",
-    bg: "#EDEBE7",
-    icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="14" r="5" fill="#8b8276"/><path d="M12 26h24v12H12z" stroke="#8b8276" stroke-width="2"/></svg>`,
+    title: "Somatic Approaches",
+    items: ["EFT", "Emotional Freedom", "Tapping", "Gestalt"],
+    bg: "#f5e8c8",
   },
   {
-    title: "Art-Based Therapy",
-    blurb: "Some things are easier to feel through colour, texture, and shape.",
-    bg: "#AFC7F2",
-    icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="18" r="5" fill="#5b7dc9"/><circle cx="28" cy="14" r="4" fill="#5b7dc9" opacity="0.6"/><path d="M12 28h24v8H12z" stroke="#5b7dc9" stroke-width="2"/></svg>`,
-  },
-  {
-    title: "Play Therapy",
-    blurb: "Big feelings sometimes need small games.",
-    bg: "#CFF7D3",
-    icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="12" width="10" height="10" fill="#5fa85d"/><circle cx="30" cy="17" r="5" fill="#5fa85d"/><path d="M12 28h24v8H12z" stroke="#5fa85d" stroke-width="2"/></svg>`,
-  },
-  {
-    title: "Narrative Therapy",
-    blurb: "What would your story say if you held the pen?",
-    bg: "#F5D7D9",
-    icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 14h24c1 0 2 1 2 2v18c0 1-1 2-2 2H12c-1 0-2-1-2-2V16c0-1 1-2 2-2z" stroke="#b87b8a" stroke-width="2"/><path d="M16 20h16M16 26h12" stroke="#b87b8a" stroke-width="1.5"/></svg>`,
-  },
-  {
-    title: "Polyvagal Therapy",
-    blurb: "Fight, flight, freeze—your body has a playlist. Let's tune in.",
-    bg: "#FFCFB0",
-    icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 10c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14z" stroke="#d47f3a" stroke-width="2"/><path d="M20 18l-2 2M28 18l2 2" stroke="#d47f3a" stroke-width="1.5"/></svg>`,
-  },
-  {
-    title: "Internal Family Systems (IFS)",
-    blurb:
-      "Maybe the anxious part isn't you—just a protector who showed up early.",
-    bg: "#BFB6B0",
-    icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="12" stroke="#6b6058"/><circle cx="18" cy="18" r="3" fill="#6b6058"/><circle cx="30" cy="18" r="3" fill="#6b6058"/><circle cx="24" cy="32" r="3" fill="#6b6058"/></svg>`,
-  },
-  {
-    title: "Trauma-Informed Therapy",
-    blurb: "We go at your pace. Safety first. Always.",
-    bg: "#D6EEFF",
-    icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 10l4 10h11l-9 7 4 10-10-7-10 7 4-10-9-7h11l4-10z" fill="#4b9fd6"/></svg>`,
+    title: "Trauma Informed Practice",
+    items: ["Triphasic Model"],
+    bg: "#fce8e0",
   },
 ]);
-
-onMounted(() => {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // Animate ALL cards one by one when section comes into view
-        const allCards = document.querySelectorAll(".service-card");
-        allCards.forEach((card, index) => {
-          card.style.setProperty("--stagger-delay", `${index * 0.15}s`);
-          card.classList.add("fade-in-up");
-        });
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  const servicesSection = document.querySelector(".services-wrapper");
-  if (servicesSection) {
-    observer.observe(servicesSection);
-  }
-});
 </script>
 
 <style scoped>
@@ -149,63 +98,55 @@ onMounted(() => {
   font-style: italic;
 }
 
-.services-grid {
+.approaches-grid {
   display: grid;
-  gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
 }
 
-.service-card {
-  padding: 24px;
-  color: #1f1f1f;
-  min-height: 200px;
+.approach-card {
+  padding: 48px 32px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 12px;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  min-height: 280px;
 }
-.service-icon {
-  width: 72px;
-  height: 72px;
-  margin-bottom: 12px;
-}
-.service-icon svg {
-  width: 72px;
-  height: 72px;
-}
-.service-title {
+
+.approach-title {
   font-family: "Playfair Display", serif;
-  margin: 0 0 6px;
-  font-size: 18px;
-}
-.service-rule {
-  width: 66px;
-  border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
-  margin-bottom: 12px;
-}
-.service-blurb {
+  font-size: 22px;
   margin: 0;
+  color: #2b2b2b;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.approach-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.approach-list li {
+  font-size: 14px;
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-@media (min-width: 900px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 899px) {
-  .services-grid {
+@media (max-width: 900px) {
+  .approaches-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .services-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .service-card {
-    min-height: 160px;
+  .approaches-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
