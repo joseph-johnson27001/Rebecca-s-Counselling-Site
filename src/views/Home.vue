@@ -23,17 +23,22 @@
           <h1 class="fade-in-up" style="animation-delay: 0.2s">
             All parts of you are welcome.
           </h1>
+
           <p class="fade-in-up" style="animation-delay: 0.4s">
-            I'm Rebecca — offering evidence-informed, trauma-aware therapy. I
-            work with children, adolescents, young adults and parents. Sessions
-            are available online and in-person.
+            I am an integrative counsellor and trauma-informed practitioner
+            working with children, adolescents, adults, and parents. My approach
+            is warm, relational, and tailored to each individual, creating a
+            space where people feel safe to explore challenges without judgement
+            or pressure.
           </p>
           <p class="fade-in-up" style="animation-delay: 0.6s">
-            I aim to create a safe, supportive space where you can explore
-            challenges, build resilience, and develop practical tools for coping
-            and growth. Together, we work at your pace, focusing on your unique
-            needs and strengths.
+            I work integratively, meaning therapy is adapted thoughtfully to
+            each person rather than following one fixed approach. Grounded in
+            relational, trauma-aware, and neurodiversity-affirming practice, I
+            place importance on emotional safety, connection, and understanding
+            the wider experiences that shape us.
           </p>
+
           <div class="cta-wrap fade-in-up" style="animation-delay: 0.8s">
             <a href="#services" class="btn">My Services</a>
             <a href="#age-groups" class="btn btn-age">Who I Work With</a>
@@ -48,18 +53,11 @@
       <div class="about-left">
         <h2 class="about-heading">Hi, I'm Rebecca</h2>
         <p class="about-desc">
-          I am an integrative counsellor and trauma-informed practitioner
-          working with children, adolescents, adults, and parents. My approach
-          is warm, relational, and tailored to each individual, creating a space
-          where people feel safe to explore challenges without judgement or
-          pressure.
-        </p>
-        <p class="about-desc">
-          I work integratively, meaning therapy is adapted thoughtfully to each
-          person rather than following one fixed approach. Grounded in
-          relational, trauma-aware, and neurodiversity-affirming practice, I
-          place importance on emotional safety, connection, and understanding
-          the wider experiences that shape us.
+          I have over 10 years of experience working therapeutically with
+          children, adolescents, and adults, including extensive experience
+          within both school-based and international settings. I am a BACP
+          Accredited Counsellor and work in accordance with the BACP Ethical
+          Framework.
         </p>
         <p class="about-desc">My practice draws from:</p>
         <ul class="about-list">
@@ -75,13 +73,6 @@
           approaches, sand tray work, grounding techniques, emotional regulation
           support, and body-based approaches that help clients better understand
           both their emotional and nervous system responses.
-        </p>
-        <p class="about-desc">
-          I have over 10 years of experience working therapeutically with
-          children, adolescents, and adults, including extensive experience
-          within both school-based and international settings. I am a BACP
-          Accredited Counsellor and work in accordance with the BACP Ethical
-          Framework.
         </p>
         <p class="about-desc">Sessions are available currently online.</p>
       </div>
