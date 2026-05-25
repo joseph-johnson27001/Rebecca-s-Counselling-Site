@@ -15,6 +15,14 @@
 <script setup>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
+import { onMounted } from "vue";
+
+onMounted(() => {
+  // Clear hash on app load so page always starts at top on refresh
+  if (window.location.hash) {
+    window.history.replaceState(null, "", window.location.pathname);
+  }
+});
 </script>
 
 <style>
