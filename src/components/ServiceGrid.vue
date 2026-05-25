@@ -123,6 +123,12 @@
           class="approach-card fade-on-scroll"
           :style="{ background: approach.bg }"
         >
+          <img
+            v-if="approach.icon"
+            :src="approach.icon"
+            :alt="approach.title"
+            class="approach-icon"
+          />
           <h3 class="approach-title">{{ approach.title }}</h3>
           <ul class="approach-list">
             <li v-for="item in approach.items" :key="item">{{ item }}</li>
@@ -148,21 +154,25 @@ const approaches = reactive([
       "Attachment-Based",
     ],
     bg: "#F7D9C8",
+    icon: "/src/assets/chat_icon.png",
   },
   {
     title: "Creative Methods",
     items: ["Art", "Play", "Sand Tray"],
     bg: "#d4e8d0",
+    icon: "/src/assets/kite_icon.png",
   },
   {
     title: "Somatic Approaches",
     items: ["EFT", "Emotional Freedom", "Tapping", "Gestalt"],
     bg: "#f5e8c8",
+    icon: "/src/assets/compass_icon.png",
   },
   {
     title: "Trauma Informed Practice",
     items: ["Triphasic Model"],
     bg: "#fce8e0",
+    icon: "/src/assets/family_icon.png",
   },
 ]);
 </script>
@@ -335,6 +345,12 @@ const approaches = reactive([
   text-align: center;
   gap: 24px;
   min-height: 280px;
+}
+
+.approach-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 .approach-title {
