@@ -348,19 +348,15 @@ const toggleItem = (index) => {
   transition: box-shadow 0.3s ease;
 }
 
-.faq-item:hover {
-  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
-}
-
 /* Alternating warm pastel backgrounds */
 .faq-item:nth-child(3n + 1) .faq-question {
-  background: #fdf6f1;
+  background: #faeee5;
 }
 .faq-item:nth-child(3n + 2) .faq-question {
-  background: #f2f5f0;
+  background: #e8ede6;
 }
 .faq-item:nth-child(3n + 3) .faq-question {
-  background: #fdf2ec;
+  background: #fae8df;
 }
 
 .faq-item:nth-child(3n + 1) .faq-answer {
@@ -371,16 +367,6 @@ const toggleItem = (index) => {
 }
 .faq-item:nth-child(3n + 3) .faq-answer {
   background: #fef7f2;
-}
-
-.faq-item:nth-child(3n + 1):hover .faq-question {
-  background: #faeee5;
-}
-.faq-item:nth-child(3n + 2):hover .faq-question {
-  background: #e8ede6;
-}
-.faq-item:nth-child(3n + 3):hover .faq-question {
-  background: #fae8df;
 }
 
 .faq-question {
