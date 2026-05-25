@@ -84,56 +84,6 @@ const expandedItems = ref(new Set());
 
 const faqItems = [
   {
-    question: "What services do you offer?",
-    answer:
-      "I offer individual counselling for children, adolescents, and adults, play therapy for younger clients, clinical supervision for professionals, and parent consultations. Parent consultations focus on supporting you in understanding and navigating your child's emotional and behavioral needs.",
-  },
-  {
-    question: "What is the difference between counselling and play therapy?",
-    answer:
-      "Counselling uses conversation to explore thoughts and feelings, while play therapy lets children express themselves through play, which can help them process emotions when words are tough.",
-  },
-  {
-    question: "Who can access your services?",
-    answer:
-      "I work with children, adolescents, adults, and parents. Whether you're seeking support for yourself or guidance on behalf of your child, I'm here to help.",
-  },
-  {
-    question: "What is clinical supervision?",
-    answer:
-      "Clinical supervision is a reflective, professional space where therapists and helping professionals can develop their practice, reflect on their work, and ensure ethical, high-quality care.",
-  },
-  {
-    question: "Do you offer in-person or online sessions?",
-    answer:
-      "I offer both. Sessions can be in person (at my practice) or online, depending on location as I work internationally.",
-  },
-  {
-    question: "What can I expect in my first session?",
-    answer:
-      "The first session is a gentle beginning. We'll talk about what's bringing you here, your goals, and we'll see if we're a good fit—no pressure.",
-  },
-  {
-    question: "How long are sessions and how much do they cost?",
-    answer:
-      "Sessions are 50 minutes. My standard rate is £80 per session. However, I offer a sliding scale for students or those with a low income. Please reach out so we can discuss a rate that works for you. All fees to be paid before the session.",
-  },
-  {
-    question: "Do you offer a free consultation?",
-    answer:
-      "Yes, I offer a brief initial consultation so you can get a sense of the process and ask any initial questions.",
-  },
-  {
-    question: "How do I get started?",
-    answer:
-      "You can contact me via the form on this website or by email. I'll respond with next steps and available times.",
-  },
-  {
-    question: "What if I need to cancel or reschedule?",
-    answer:
-      "Please let me know at least 48 hours in advance. If you cancel less than 24 hours before, you'll be charged at half the session rate.",
-  },
-  {
     question: "How can I help prepare my child for therapy?",
     answer: `<p>Taking the step to seek support for your child can feel significant. It often comes with a mix of hope, uncertainty, and sometimes worry about how your child will respond. All of that is completely understandable.</p>
 
@@ -220,6 +170,56 @@ const faqItems = [
 
 <h4>Confidentiality</h4>
 <p>Your sessions are confidential, with clear and transparent limits relating to safety. This confidentiality is what allows for openness, honesty, and trust to develop.</p>`,
+  },
+  {
+    question: "What services do you offer?",
+    answer:
+      "I offer individual counselling for children, adolescents, and adults, play therapy for younger clients, clinical supervision for professionals, and parent consultations. Parent consultations focus on supporting you in understanding and navigating your child's emotional and behavioral needs.",
+  },
+  {
+    question: "What is the difference between counselling and play therapy?",
+    answer:
+      "Counselling uses conversation to explore thoughts and feelings, while play therapy lets children express themselves through play, which can help them process emotions when words are tough.",
+  },
+  {
+    question: "Who can access your services?",
+    answer:
+      "I work with children, adolescents, adults, and parents. Whether you're seeking support for yourself or guidance on behalf of your child, I'm here to help.",
+  },
+  {
+    question: "What is clinical supervision?",
+    answer:
+      "Clinical supervision is a reflective, professional space where therapists and helping professionals can develop their practice, reflect on their work, and ensure ethical, high-quality care.",
+  },
+  {
+    question: "Do you offer in-person or online sessions?",
+    answer:
+      "I offer both. Sessions can be in person (at my practice) or online, depending on location as I work internationally.",
+  },
+  {
+    question: "What can I expect in my first session?",
+    answer:
+      "The first session is a gentle beginning. We'll talk about what's bringing you here, your goals, and we'll see if we're a good fit—no pressure.",
+  },
+  {
+    question: "How long are sessions and how much do they cost?",
+    answer:
+      "Sessions are 50 minutes. My standard rate is £80 per session. However, I offer a sliding scale for students or those with a low income. Please reach out so we can discuss a rate that works for you. All fees to be paid before the session.",
+  },
+  {
+    question: "Do you offer a free consultation?",
+    answer:
+      "Yes, I offer a brief initial consultation so you can get a sense of the process and ask any initial questions.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "You can contact me via the form on this website or by email. I'll respond with next steps and available times.",
+  },
+  {
+    question: "What if I need to cancel or reschedule?",
+    answer:
+      "Please let me know at least 48 hours in advance. If you cancel less than 24 hours before, you'll be charged at half the session rate.",
   },
   {
     question: "Is what I share confidential?",
@@ -341,36 +341,63 @@ const toggleItem = (index) => {
 }
 
 .faq-item {
-  background: white;
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(199, 161, 213, 0.12);
-  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
 }
 
 .faq-item:hover {
-  box-shadow: 0 4px 20px rgba(199, 161, 213, 0.18);
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Alternating warm pastel backgrounds */
+.faq-item:nth-child(3n + 1) .faq-question {
+  background: #fdf6f1;
+}
+.faq-item:nth-child(3n + 2) .faq-question {
+  background: #f2f5f0;
+}
+.faq-item:nth-child(3n + 3) .faq-question {
+  background: #fdf2ec;
+}
+
+.faq-item:nth-child(3n + 1) .faq-answer {
+  background: #fefaf7;
+}
+.faq-item:nth-child(3n + 2) .faq-answer {
+  background: #f7faf6;
+}
+.faq-item:nth-child(3n + 3) .faq-answer {
+  background: #fef7f2;
+}
+
+.faq-item:nth-child(3n + 1):hover .faq-question {
+  background: #faeee5;
+}
+.faq-item:nth-child(3n + 2):hover .faq-question {
+  background: #e8ede6;
+}
+.faq-item:nth-child(3n + 3):hover .faq-question {
+  background: #fae8df;
 }
 
 .faq-question {
   width: 100%;
-  padding: 28px 28px;
-  background: linear-gradient(135deg, #f9f5ff 0%, #fef5f9 100%);
-  border: 1px solid rgba(199, 161, 213, 0.15);
+  padding: 26px 28px;
+  border: none;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
   font-family: inherit;
   font-size: 16px;
-  font-weight: 600;
-  color: var(--text-color, #333);
-}
-
-.faq-question:hover {
-  background: linear-gradient(135deg, #f3ecff 0%, #fceef5 100%);
+  font-weight: 500;
+  color: var(--text, #2b2b2b);
+  letter-spacing: 0.01em;
 }
 
 .question-text {
@@ -386,7 +413,7 @@ const toggleItem = (index) => {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: var(--accent, #c7a1d5);
+  color: var(--muted, #7b736b);
   transition: transform 0.3s ease;
   margin-left: 16px;
   transform: rotate(90deg);
@@ -398,11 +425,10 @@ const toggleItem = (index) => {
 
 .faq-answer {
   padding: 24px 28px;
-  color: var(--muted, #666);
+  color: var(--muted, #7b736b);
   line-height: 1.75;
   font-size: 15px;
-  background-color: rgba(249, 245, 255, 0.5);
-  border-top: 1px solid rgba(199, 161, 213, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .faq-answer h4 {
@@ -471,10 +497,6 @@ const toggleItem = (index) => {
 
   .section {
     padding: 20px 10px;
-  }
-
-  .faq-item {
-    border-radius: 16px;
   }
 
   .faq-question {
