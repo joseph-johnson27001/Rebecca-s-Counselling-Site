@@ -6,7 +6,7 @@
         <h2>My Services</h2>
       </div>
       <div class="service-cards-grid">
-        <div class="service-card fade-on-scroll" style="--card-accent: #f0ebe3">
+        <div class="service-card fade-on-scroll" style="--card-accent: #f5dcc8">
           <div class="service-card-top">
             <h3 class="service-title">Counselling &amp; Therapy</h3>
           </div>
