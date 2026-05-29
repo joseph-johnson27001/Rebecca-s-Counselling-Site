@@ -14,14 +14,25 @@
         </a>
       </div>
       <div class="footer-center">
-        <a
-          href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="bacp-link"
-        >
-          <img src="/src/assets/BACP_Logo.png" alt="BACP" class="bacp-logo" />
-        </a>
+        <div class="accreditation-logos">
+          <a
+            href="https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="accreditation-link"
+          >
+            <img
+              src="/src/assets/BACP_Logo.png"
+              alt="BACP"
+              class="accreditation-logo"
+            />
+          </a>
+          <img
+            src="/src/assets/ptuk_logo.png"
+            alt="Play Therapy International"
+            class="accreditation-logo ptuk-logo"
+          />
+        </div>
       </div>
       <div class="footer-right">
         <div class="footer-email">rebecca.raye.counselling@gmail.com</div>
@@ -65,19 +76,31 @@
   text-align: center;
 }
 
-.bacp-link {
+.accreditation-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.accreditation-link {
   display: inline-block;
   transition: opacity 0.2s;
 }
 
-.bacp-link:hover {
+.accreditation-link:hover {
   opacity: 0.75;
 }
 
-.bacp-logo {
+.accreditation-logo {
   height: 70px;
   width: auto;
   object-fit: contain;
+}
+
+.ptuk-logo {
+  height: 100px;
 }
 
 .footer-right {
@@ -115,6 +138,16 @@
   color: var(--accent);
 }
 
+@media (max-width: 1024px) {
+  .accreditation-logo {
+    height: 50px;
+  }
+
+  .ptuk-logo {
+    height: 70px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-inner {
     flex-direction: column;
@@ -133,6 +166,18 @@
 
   .bacp-logo {
     height: 60px;
+  }
+
+  .accreditation-logo {
+    height: 60px;
+  }
+
+  .ptuk-logo {
+    height: 80px;
+  }
+
+  .accreditation-logos {
+    gap: 16px;
   }
 
   .ethical-framework-link {
