@@ -138,17 +138,60 @@
   color: var(--accent);
 }
 
+/* Tablet large: scale slightly */
 @media (max-width: 1024px) {
+  .footer-inner {
+    gap: 20px;
+  }
+
+  .footer-left strong {
+    font-size: 14px;
+  }
+
   .accreditation-logo {
-    height: 50px;
+    height: 46px;
   }
 
   .ptuk-logo {
-    height: 70px;
+    height: 66px;
   }
 }
 
+/* Tablet small: scale more aggressively, still horizontal */
 @media (max-width: 768px) {
+  .footer-inner {
+    gap: 12px;
+  }
+
+  .footer-left strong {
+    font-size: 12px;
+  }
+
+  .accreditation-logo {
+    height: 32px;
+  }
+
+  .ptuk-logo {
+    height: 46px;
+  }
+
+  .accreditation-logos {
+    gap: 12px;
+  }
+
+  .footer-sub,
+  .footer-email {
+    font-size: 11px;
+  }
+
+  .ethical-framework-link,
+  .booking-link {
+    font-size: 11px;
+  }
+}
+
+/* Mobile: stack */
+@media (max-width: 600px) {
   .footer-inner {
     flex-direction: column;
     align-items: center;
@@ -164,23 +207,29 @@
     text-align: center;
   }
 
-  .bacp-logo {
-    height: 60px;
-  }
-
   .accreditation-logo {
-    height: 60px;
+    height: 56px;
   }
 
   .ptuk-logo {
-    height: 80px;
+    height: 76px;
   }
 
   .accreditation-logos {
     gap: 16px;
   }
 
-  .ethical-framework-link {
+  .footer-left strong {
+    font-size: 16px;
+  }
+
+  .footer-sub,
+  .footer-email {
+    font-size: 13px;
+  }
+
+  .ethical-framework-link,
+  .booking-link {
     font-size: 12px;
   }
 }
