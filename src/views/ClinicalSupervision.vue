@@ -70,7 +70,7 @@
     <!-- What Supervision Is Like + My Approach -->
     <section v-show="videoLoaded" class="section two-col-section">
       <div class="two-col-grid">
-        <div class="info-card fade-on-scroll">
+        <div class="info-card fade-on-scroll" style="--card-accent: #f5dcc8">
           <h2 class="card-heading">What Supervision With Me Is Like</h2>
           <p class="card-text">
             This isn't a place to perform or prove you're getting it "right."
@@ -91,7 +91,7 @@
           </ul>
         </div>
 
-        <div class="info-card fade-on-scroll">
+        <div class="info-card fade-on-scroll" style="--card-accent: #e8ede6">
           <h2 class="card-heading">My Approach</h2>
           <p class="card-text">My work is shaped by:</p>
           <ul class="styled-list">
@@ -190,7 +190,7 @@
               <span class="practical-icon">&#163;</span>
               <h3 class="practical-title">Standard Rate</h3>
             </div>
-            <p class="practical-text">£70 per session</p>
+            <p class="practical-text">£85 per session</p>
             <!-- <p class="practical-text muted">£3,500 block rate available</p> -->
           </div>
           <div class="practical-item">
@@ -198,7 +198,7 @@
               <span class="practical-icon">&#127891;</span>
               <h3 class="practical-title">Student &amp; Trainee Rate</h3>
             </div>
-            <p class="practical-text">£45 per session</p>
+            <p class="practical-text">£50 per session</p>
             <!-- <p class="practical-text muted">£2,000 block rate available</p> -->
           </div>
           <div class="practical-item">
@@ -481,12 +481,14 @@ const practitionerPanels = [
   gap: 32px;
 }
 .info-card {
-  background: var(--soft);
+  background: var(--card-accent, var(--soft));
   border-radius: 12px;
   padding: 36px;
   display: flex;
   flex-direction: column;
   gap: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
 }
 .card-heading {
   font-family: system-ui, sans-serif;
