@@ -26,18 +26,21 @@
             Clinical Supervision
           </h1>
           <p class="fade-in-up" style="animation-delay: 0.5s">
-            As a clinical supervisor, I work with both trainee and qualified
-            psychotherapists and counsellors. My supervision practice is
-            grounded in an empowering, compassionate, and relational approach —
-            one that fosters learning, development, and professional growth in a
-            space where reflection and curiosity are encouraged.
+            As a clinical supervisor, I work with trainee and qualified
+            psychotherapists, counsellors, and other helping professionals. My
+            supervision practice is grounded in an empowering, compassionate,
+            and relational approach, fostering learning, development, and
+            professional growth within a space where reflection and curiosity
+            are encouraged.
           </p>
           <p class="fade-in-up" style="animation-delay: 0.6s">
-            I offer monthly clinical supervision for counsellors and helping
-            professionals working across private practice, schools, and other
-            organisational settings. I draw on the Seven-Eyed Model alongside an
-            integrative, trauma-informed lens to help us make sense of what's
-            happening in the room, around the room, and within you.
+            I offer monthly clinical supervision for counsellors, therapists,
+            and other helping professionals working across private practice,
+            schools, and other organisational settings. I draw on the Seven-Eyed
+            Model alongside an integrative, trauma-informed and culturally
+            responsive lens to help us make sense of what is happening in the
+            room, while supporting thoughtful clinical practice, professional
+            development, and the wellbeing of the practitioner.
           </p>
           <p class="hero-quote fade-in-up" style="animation-delay: 0.75s">
             All parts of you are welcome. Even the ones you're not sure what to
@@ -190,7 +193,7 @@
               <span class="practical-icon">&#163;</span>
               <h3 class="practical-title">Standard Rate</h3>
             </div>
-            <p class="practical-text">£85 per session</p>
+            <p class="practical-text">£90 per session</p>
             <!-- <p class="practical-text muted">£3,500 block rate available</p> -->
           </div>
           <div class="practical-item">
@@ -198,7 +201,7 @@
               <span class="practical-icon">&#127891;</span>
               <h3 class="practical-title">Student &amp; Trainee Rate</h3>
             </div>
-            <p class="practical-text">£50 per session</p>
+            <p class="practical-text">£55 per session</p>
             <!-- <p class="practical-text muted">£2,000 block rate available</p> -->
           </div>
           <div class="practical-item">
